@@ -35,17 +35,20 @@
     .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px}
     .section-head h2{font-size:clamp(34px,5vw,62px);line-height:.98;letter-spacing:-.055em;margin:12px 0 0}
     .section-head p{max-width:300px;color:var(--muted);font-size:14px;margin:0}
-    .clients{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-    .client{min-height:190px;padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#171717,#0c0c0c)}
-    .client strong{font-size:clamp(19px,2.4vw,28px);letter-spacing:-.04em}
-    .client small{color:#92928e;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
-    .client-logo{display:block;width:100%;height:78px;object-fit:contain;object-position:left center}
-    .client-feature{position:relative;min-height:260px;padding:0;overflow:hidden;display:block;background:#111}
-    .client-feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-    .client-feature:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.78))}
-    .client-feature-label{position:absolute;z-index:1;left:22px;right:22px;bottom:18px;display:flex;flex-direction:column;gap:5px}
-    .client-feature-label small{color:#eee;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
-    .client-feature-label strong{font-size:24px;letter-spacing:-.04em;color:#fff}
+    .clients{overflow:hidden;position:relative;width:100%;mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+    .clients-track{display:flex;gap:16px;width:max-content;animation:brands-scroll 34s linear infinite}
+    .clients:hover .clients-track,.clients:focus-within .clients-track{animation-play-state:paused}
+    .client{position:relative;flex:0 0 310px;height:176px;overflow:hidden;display:block;background:#111;border:1px solid #303030}
+    .client strong{font-size:22px;letter-spacing:-.04em}
+    .client small{color:#eee;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+    .client-feature{padding:0}
+    .client-feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+    .client-feature:hover img{transform:scale(1.045)}
+    .client-feature:after{content:"";position:absolute;inset:25% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.82))}
+    .client-feature-label{position:absolute;z-index:1;left:20px;right:20px;bottom:16px;display:flex;flex-direction:column;gap:4px}
+    .client-feature-label strong{font-size:22px;letter-spacing:-.04em;color:#fff}
+    @keyframes brands-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 8px))}}
+    @media(prefers-reduced-motion:reduce){.clients-track{animation:none}}
     .services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 54px}
     .service{padding:25px 0;border-top:1px solid var(--line);display:flex;gap:22px}
     .num{font-size:11px;color:#777;padding-top:5px}.service h3{font-size:21px;margin:0 0 7px;letter-spacing:-.03em}.service p{font-size:13px;color:var(--muted);margin:0;max-width:390px}
@@ -83,7 +86,7 @@
       .hero{min-height:680px;padding:155px 0 58px;background-position:center,right bottom;background-size:100% 100%,auto 78%}
       .hero-bottom,.section-head{display:block}.intro{margin-bottom:25px}
       section{padding:76px 0}.section-head p{margin-top:18px}
-      .clients{grid-template-columns:1fr 1fr}.client{min-height:145px;padding:18px}.client-feature{min-height:220px;padding:0}.client-feature-label{left:15px;right:15px;bottom:14px}.client-feature-label strong{font-size:20px}
+      .client{flex-basis:260px;height:158px}.client-feature-label{left:15px;right:15px;bottom:14px}.client-feature-label strong{font-size:20px}
       .services{grid-template-columns:1fr;gap:0}
       .portfolio{grid-template-columns:1fr}.project{min-height:230px}
       .about{grid-template-columns:1fr;gap:20px}
@@ -129,11 +132,17 @@
           <div><div class="eyebrow">Quem já confiou</div><h2>Marcas em destaque.</h2></div>
           <p>Alguns negócios e projetos que já passaram pelas lentes da DG.</p>
         </div>
-        <div class="clients">
-          <div class="client client-feature"><img src="IMG_3232.jpeg" alt="Fachada da Casa da Fazenda"><div class="client-feature-label"><small>Agropecuária</small><strong>Casa da Fazenda</strong></div></div>
-          <div class="client client-feature"><img src="copy_F6A22168-E228-4EEF-82D4-CB89E4A21C4D.jpeg" alt="Fachada da Montara Country"><div class="client-feature-label"><small>Moda country</small><strong>Montara Country</strong></div></div>
-          <div class="client client-feature"><img src="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg" alt="Fachada da chapelaria Rodeio Hats"><div class="client-feature-label"><small>Chapelaria</small><strong>Rodeio Hats</strong></div></div>
-          <div class="client client-feature"><img src="229230C1-9B78-47B4-B617-573D1C2CD194.jpeg" alt="Fachada da Lavateria Fast"><div class="client-feature-label"><small>Lavateria</small><strong>Lavateria Fast</strong></div></div>
+        <div class="clients" aria-label="Marcas atendidas">
+          <div class="clients-track">
+            <div class="client client-feature"><img src="IMG_3232.jpeg" alt="Fachada da Casa da Fazenda"><div class="client-feature-label"><small>Agropecuária</small><strong>Casa da Fazenda</strong></div></div>
+            <div class="client client-feature"><img src="copy_F6A22168-E228-4EEF-82D4-CB89E4A21C4D.jpeg" alt="Fachada da Montara Country"><div class="client-feature-label"><small>Moda country</small><strong>Montara Country</strong></div></div>
+            <div class="client client-feature"><img src="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg" alt="Fachada da chapelaria Rodeio Hats"><div class="client-feature-label"><small>Chapelaria</small><strong>Rodeio Hats</strong></div></div>
+            <div class="client client-feature"><img src="229230C1-9B78-47B4-B617-573D1C2CD194.jpeg" alt="Fachada da Lavateria Fast"><div class="client-feature-label"><small>Lavateria</small><strong>Lavateria Fast</strong></div></div>
+            <div class="client client-feature" aria-hidden="true"><img src="IMG_3232.jpeg" alt=""><div class="client-feature-label"><small>Agropecuária</small><strong>Casa da Fazenda</strong></div></div>
+            <div class="client client-feature" aria-hidden="true"><img src="copy_F6A22168-E228-4EEF-82D4-CB89E4A21C4D.jpeg" alt=""><div class="client-feature-label"><small>Moda country</small><strong>Montara Country</strong></div></div>
+            <div class="client client-feature" aria-hidden="true"><img src="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg" alt=""><div class="client-feature-label"><small>Chapelaria</small><strong>Rodeio Hats</strong></div></div>
+            <div class="client client-feature" aria-hidden="true"><img src="229230C1-9B78-47B4-B617-573D1C2CD194.jpeg" alt=""><div class="client-feature-label"><small>Lavateria</small><strong>Lavateria Fast</strong></div></div>
+          </div>
         </div>
       </div>
     </section>
