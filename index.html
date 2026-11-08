@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="DG Videomaker. Foto, vídeo e conteúdo para marcas, negócios e eventos em São José dos Campos e região.">
+  <title>DG Videomaker | Foto, Vídeo e Conteúdo</title>
+  <style>
+    :root{--bg:#090909;--surface:#121212;--text:#f5f5f3;--muted:#a6a6a2;--line:#30302e;--white:#fff;--max:1160px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+    header{position:absolute;top:0;left:0;width:100%;z-index:2;border-bottom:1px solid rgba(255,255,255,.13)}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-size:18px;font-weight:800;letter-spacing:.12em}.brand span{display:block;font-size:9px;font-weight:400;letter-spacing:.38em;color:#aaa;margin-top:2px}
+    .links{display:flex;gap:30px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#d0d0cd}
+    .links a:hover,.text-link:hover{color:#fff}
+    .hero{min-height:690px;display:flex;align-items:flex-end;padding:170px 0 92px;background:radial-gradient(ellipse at 78% 35%,#292929 0%,#151515 26%,#090909 65%)}
+    .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#b7b7b2}
+    h1{font-size:clamp(54px,10vw,122px);line-height:.88;letter-spacing:-.075em;margin:28px 0 24px;font-weight:800;max-width:950px}
+    h1 span{color:#777}
+    .hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:30px}
+    .intro{max-width:390px;color:#c0c0bc;font-size:15px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 23px;border:1px solid #eee;font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
+    .button:hover{background:#fff;color:#090909}
+    section{padding:104px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px}
+    .section-head h2{font-size:clamp(34px,5vw,62px);line-height:.98;letter-spacing:-.055em;margin:12px 0 0}
+    .section-head p{max-width:300px;color:var(--muted);font-size:14px;margin:0}
+    .clients{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    .client{min-height:190px;padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#171717,#0c0c0c)}
+    .client strong{font-size:clamp(19px,2.4vw,28px);letter-spacing:-.04em}
+    .client small{color:#92928e;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 54px}
+    .service{padding:25px 0;border-top:1px solid var(--line);display:flex;gap:22px}
+    .num{font-size:11px;color:#777;padding-top:5px}.service h3{font-size:21px;margin:0 0 7px;letter-spacing:-.03em}.service p{font-size:13px;color:var(--muted);margin:0;max-width:390px}
+    .portfolio{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+    .project{min-height:300px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(135deg,#252525,#111);border:1px solid #303030}
+    .project:nth-child(2){background:linear-gradient(145deg,#1d1d1d,#0d0d0d)}
+    .project:nth-child(3){background:linear-gradient(135deg,#191919,#292929)}
+    .project:nth-child(4){background:linear-gradient(145deg,#252525,#101010)}
+    .project .tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#aaa}
+    .project h3{font-size:clamp(24px,3vw,38px);letter-spacing:-.05em;margin:0;max-width:420px}
+    .project p{font-size:13px;color:#b0b0ac;margin:8px 0 0}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+    .about h2{font-size:clamp(38px,6vw,72px);line-height:.95;letter-spacing:-.065em;margin:14px 0}
+    .about-copy{color:#bcbcb7;font-size:15px;max-width:500px}
+    .about-copy p{margin:0 0 18px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .step{border-top:1px solid var(--line);padding-top:18px}
+    .step b{font-size:11px;color:#858580;letter-spacing:.16em}
+    .step h3{font-size:19px;margin:16px 0 8px}.step p{font-size:13px;color:var(--muted);margin:0}
+    .contact{padding:100px 0 110px;background:#f1f1ee;color:#090909}
+    .contact .eyebrow{color:#666}.contact h2{font-size:clamp(48px,9vw,104px);line-height:.9;letter-spacing:-.075em;max-width:850px;margin:24px 0 32px}
+    .contact .button{border-color:#090909}.contact .button:hover{background:#090909;color:#fff}
+    footer{padding:28px 0;color:#888;font-size:11px}
+    .foot{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:700px){
+      .wrap{width:min(var(--max),calc(100% - 36px))}
+      .nav{height:70px}.links{gap:13px;font-size:9px}.links a:nth-child(2){display:none}
+      .hero{min-height:650px;padding:145px 0 58px}
+      .hero-bottom,.section-head{display:block}.intro{margin-bottom:25px}
+      section{padding:76px 0}.section-head p{margin-top:18px}
+      .clients{grid-template-columns:1fr 1fr}.client{min-height:145px;padding:18px}
+      .services{grid-template-columns:1fr;gap:0}
+      .portfolio{grid-template-columns:1fr}.project{min-height:230px}
+      .about{grid-template-columns:1fr;gap:20px}
+      .steps{grid-template-columns:1fr;gap:28px}
+      .contact{padding:76px 0}
+      .foot{display:block}.foot span{display:block;margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio">DG<span>VIDEOMAKER · MOBILE</span></a>
+      <nav class="links" aria-label="Navegação principal">
+        <a href="#trabalhos">Trabalhos</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio" style="border:0">
+      <div class="wrap">
+        <div class="eyebrow">São José dos Campos + região</div>
+        <h1>SEU NEGÓCIO.<br><span>EM MOVIMENTO.</span></h1>
+        <div class="hero-bottom">
+          <p class="intro">Foto, vídeo e conteúdo que mostram o valor da sua marca e aproximam seu negócio das pessoas.</p>
+          <a class="button" href="https://www.instagram.com/dg.vmaker/" target="_blank" rel="noopener">Solicitar orçamento ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Quem já confiou</div><h2>Marcas em destaque.</h2></div>
+          <p>Alguns negócios e projetos que já passaram pelas lentes da DG.</p>
+        </div>
+        <div class="clients">
+          <div class="client"><small>Agropecuária</small><strong>Casa da Fazenda</strong></div>
+          <div class="client"><small>Moda country</small><strong>Montara Country</strong></div>
+          <div class="client"><small>Chapelaria</small><strong>Rodeio Hats</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">O que fazemos</div><h2>Conteúdo com intenção.</h2></div>
+          <p>Da ideia à publicação, com uma comunicação que combina com a identidade do seu negócio.</p>
+        </div>
+        <div class="services">
+          <article class="service"><span class="num">01</span><div><h3>Vídeos para Reels</h3><p>Vídeos curtos e dinâmicos para apresentar produtos, serviços, bastidores e experiências.</p></div></article>
+          <article class="service"><span class="num">02</span><div><h3>Fotografia comercial</h3><p>Imagens para valorizar produtos, espaços, pessoas e a presença digital da sua marca.</p></div></article>
+          <article class="service"><span class="num">03</span><div><h3>Criação de conteúdo</h3><p>Planejamento e produção de materiais para manter suas redes sociais ativas e interessantes.</p></div></article>
+          <article class="service"><span class="num">04</span><div><h3>Gestão de redes sociais</h3><p>Organização das publicações e acompanhamento da comunicação da sua marca.</p></div></article>
+          <article class="service"><span class="num">05</span><div><h3>Anúncios e impulsionamentos</h3><p>Configuração e acompanhamento de campanhas para ampliar o alcance das publicações.</p></div></article>
+          <article class="service"><span class="num">06</span><div><h3>Cobertura de eventos</h3><p>Registro de momentos, celebrações e eventos especiais em foto e vídeo.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="trabalhos">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Portfólio</div><h2>Histórias em imagem.</h2></div>
+          <p>Conteúdo para marcas, eventos e momentos que merecem ser lembrados.</p>
+        </div>
+        <div class="portfolio">
+          <article class="project"><span class="tag">Conteúdo para marcas</span><div><h3>Produtos, pessoas e propósito.</h3><p>Produção de conteúdo para negócios locais.</p></div></article>
+          <article class="project"><span class="tag">Eventos</span><div><h3>Momentos que ficam.</h3><p>Aniversários e celebrações.</p></div></article>
+          <article class="project"><span class="tag">Universo equestre</span><div><h3>Paixão em cada detalhe.</h3><p>Provas e eventos equestres.</p></div></article>
+          <article class="project"><span class="tag">Foto e vídeo</span><div><h3>Uma nova forma de apresentar sua marca.</h3><p>Conteúdo pensado para redes sociais.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="wrap about">
+        <div><div class="eyebrow">Sobre a DG</div><h2>Olhar criativo.<br>Conteúdo de verdade.</h2></div>
+        <div class="about-copy">
+          <p>A DG Videomaker nasceu de um gosto por criar imagens e contar histórias. O que começou como uma paixão foi ganhando forma, propósito e espaço para se tornar um trabalho.</p>
+          <p>Hoje, a proposta é ajudar marcas e pessoas a mostrarem o que têm de melhor por meio de fotos e vídeos feitos para conectar, apresentar e valorizar cada história.</p>
+          <p>Atendimento em São José dos Campos e região.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Como funciona</div><h2>Simples, do começo ao fim.</h2></div>
+        </div>
+        <div class="steps">
+          <article class="step"><b>01 / CONVERSA</b><h3>Entendemos sua ideia.</h3><p>Você conta o que precisa e alinhamos o objetivo do conteúdo.</p></article>
+          <article class="step"><b>02 / PRODUÇÃO</b><h3>Hora de criar.</h3><p>Organizamos a captação e produzimos fotos e vídeos.</p></article>
+          <article class="step"><b>03 / ENTREGA</b><h3>Seu conteúdo pronto.</h3><p>Você recebe os materiais finalizados para usar nas suas redes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="wrap">
+        <div class="eyebrow">Vamos conversar?</div>
+        <h2>Sua próxima ideia começa aqui.</h2>
+        <a class="button" href="https://www.instagram.com/dg.vmaker/" target="_blank" rel="noopener">Fale com a DG no Instagram ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><strong>DG VIDEOMAKER · MOBILE</strong><span>São José dos Campos + região</span><span>© 2026 DG Videomaker</span></div></footer>
+</body>
+</html>
