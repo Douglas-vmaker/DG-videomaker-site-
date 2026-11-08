@@ -18,7 +18,10 @@
     .brand img{display:block;width:250px;height:auto;max-height:90px;object-fit:contain;object-position:left center}
     .links{display:flex;gap:30px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#d0d0cd}
     .links a:hover,.text-link:hover{color:#fff}
-    .hero{min-height:720px;display:flex;align-items:flex-end;padding:190px 0 92px;background-color:#090909;background-image:linear-gradient(90deg,rgba(9,9,9,.96) 0%,rgba(9,9,9,.82) 38%,rgba(9,9,9,.18) 72%,rgba(9,9,9,.04) 100%),url('8381BF9F-E38C-46D8-8FD5-10F32ECBB082.png');background-repeat:no-repeat,no-repeat;background-position:center,right center;background-size:100% 100%,auto 100%}
+    .hero{position:relative;isolation:isolate;overflow:hidden;min-height:720px;display:flex;align-items:flex-end;padding:190px 0 92px;background:#090909}
+    .hero:before{content:"";position:absolute;z-index:-2;inset:0;background-image:url('8381BF9F-E38C-46D8-8FD5-10F32ECBB082.jpeg');background-repeat:no-repeat;background-position:68% center;background-size:cover;transform:scaleX(-1)}
+    .hero:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(9,9,9,.97) 0%,rgba(9,9,9,.86) 36%,rgba(9,9,9,.34) 67%,rgba(9,9,9,.08) 100%)}
+    .hero .wrap{position:relative;z-index:1}
     .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#b7b7b2}
     h1{font-size:clamp(54px,10vw,122px);line-height:.88;letter-spacing:-.075em;margin:28px 0 24px;font-weight:800;max-width:950px}
     h1 span{color:#777}
@@ -35,17 +38,21 @@
     .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px}
     .section-head h2{font-size:clamp(34px,5vw,62px);line-height:.98;letter-spacing:-.055em;margin:12px 0 0}
     .section-head p{max-width:300px;color:var(--muted);font-size:14px;margin:0}
-    .clients{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-    .client{min-height:190px;padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#171717,#0c0c0c)}
-    .client strong{font-size:clamp(19px,2.4vw,28px);letter-spacing:-.04em}
-    .client small{color:#92928e;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
-    .client-logo{display:block;width:100%;height:78px;object-fit:contain;object-position:left center}
-    .client-feature{position:relative;min-height:260px;padding:0;overflow:hidden;display:block;background:#111}
-    .client-feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-    .client-feature:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.78))}
-    .client-feature-label{position:absolute;z-index:1;left:22px;right:22px;bottom:18px;display:flex;flex-direction:column;gap:5px}
-    .client-feature-label small{color:#eee;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
-    .client-feature-label strong{font-size:24px;letter-spacing:-.04em;color:#fff}
+    .carousel-shell{position:relative}
+    .brand-carousel,.video-carousel,.photo-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 14px}
+    .brand-carousel::-webkit-scrollbar,.video-carousel::-webkit-scrollbar,.photo-carousel::-webkit-scrollbar{display:none}
+    .brand-slide{flex:0 0 25%;min-width:190px;height:170px;display:flex;align-items:center;justify-content:center;padding:28px;background:#f4f4f1;border:1px solid #ddd;scroll-snap-align:start}
+    .brand-slide img{width:100%;height:100%;object-fit:contain;display:block}
+    .carousel-arrow{position:absolute;z-index:2;top:50%;transform:translateY(-50%);width:42px;height:42px;border:1px solid #777;border-radius:50%;background:rgba(9,9,9,.9);color:#fff;font-size:27px;line-height:1;cursor:pointer}
+    .carousel-arrow:hover{background:#fff;color:#090909}
+    .carousel-arrow.prev{left:-18px}.carousel-arrow.next{right:-18px}
+    .video-card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:#121212;border:1px solid #303030;padding:10px}
+    .video-card video{width:100%;aspect-ratio:9/16;max-height:480px;object-fit:cover;display:block;background:#000}
+    .video-card h3{font-size:16px;margin:14px 8px 4px;letter-spacing:-.02em}
+    .video-card p{font-size:12px;color:var(--muted);margin:0 8px 10px}
+    .photo-card{flex:0 0 min(430px,82vw);scroll-snap-align:start;position:relative;aspect-ratio:4/3;background:#111;overflow:hidden}
+    .photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo-card span{position:absolute;left:0;right:0;bottom:0;padding:28px 18px 14px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:16px;font-weight:700}
     .services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 54px}
     .service{padding:25px 0;border-top:1px solid var(--line);display:flex;gap:22px}
     .num{font-size:11px;color:#777;padding-top:5px}.service h3{font-size:21px;margin:0 0 7px;letter-spacing:-.03em}.service p{font-size:13px;color:var(--muted);margin:0;max-width:390px}
@@ -76,10 +83,12 @@
     @media(max-width:700px){
       .wrap{width:min(var(--max),calc(100% - 36px))}
       .nav{height:86px}.brand img{width:190px;max-height:70px}.links{gap:13px;font-size:9px}.links a:nth-child(2){display:none}
-      .hero{min-height:680px;padding:155px 0 58px;background-position:center,right bottom;background-size:100% 100%,auto 78%}
+      .hero{min-height:680px;padding:155px 0 58px}
+      .hero:before{background-position:64% center;background-size:cover}
+      .hero:after{background:linear-gradient(90deg,rgba(9,9,9,.95),rgba(9,9,9,.72) 52%,rgba(9,9,9,.24))}
       .hero-bottom,.section-head{display:block}.intro{margin-bottom:25px}
       section{padding:76px 0}.section-head p{margin-top:18px}
-      .clients{grid-template-columns:1fr 1fr}.client{min-height:145px;padding:18px}.client-feature{min-height:220px;padding:0}.client-feature-label{left:15px;right:15px;bottom:14px}.client-feature-label strong{font-size:20px}
+      .brand-slide{flex-basis:72%;min-width:210px;height:140px;padding:22px}.carousel-arrow{width:36px;height:36px}.carousel-arrow.prev{left:-10px}.carousel-arrow.next{right:-10px}
       .services{grid-template-columns:1fr;gap:0}
       .portfolio{grid-template-columns:1fr}.project{min-height:230px}
       .about{grid-template-columns:1fr;gap:20px}
@@ -125,11 +134,15 @@
           <div><div class="eyebrow">Quem já confiou</div><h2>Marcas em destaque.</h2></div>
           <p>Alguns negócios e projetos que já passaram pelas lentes da DG.</p>
         </div>
-        <div class="clients">
-          <div class="client client-feature"><img src="IMG_3232.jpeg" alt="Fachada da Casa da Fazenda"><div class="client-feature-label"><small>Agropecuária</small><strong>Casa da Fazenda</strong></div></div>
-          <div class="client client-feature"><img src="copy_F6A22168-E228-4EEF-82D4-CB89E4A21C4D.jpeg" alt="Fachada da Montara Country"><div class="client-feature-label"><small>Moda country</small><strong>Montara Country</strong></div></div>
-          <div class="client client-feature"><img src="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg" alt="Fachada da chapelaria Rodeio Hats"><div class="client-feature-label"><small>Chapelaria</small><strong>Rodeio Hats</strong></div></div>
-          <div class="client client-feature"><img src="229230C1-9B78-47B4-B617-573D1C2CD194.jpeg" alt="Fachada da Lavateria Fest"><div class="client-feature-label"><small>Lavateria</small><strong>Lavateria Fest</strong></div></div>
+        <div class="carousel-shell">
+          <button class="carousel-arrow prev" type="button" aria-label="Marcas anteriores" data-target="brands">‹</button>
+          <div class="brand-carousel" id="brands" aria-label="Marcas atendidas">
+            <div class="brand-slide"><img src="Design sem nome - 1.png" alt="Logo Casa da Fazenda"></div>
+            <div class="brand-slide"><img src="Design sem nome - 2.png" alt="Logo Montara Country"></div>
+            <div class="brand-slide"><img src="Design sem nome - 3.png" alt="Logo Rodeio Hats"></div>
+            <div class="brand-slide"><img src="Design sem nome - 4.png" alt="Logo Lavateria"></div>
+          </div>
+          <button class="carousel-arrow next" type="button" aria-label="Próximas marcas" data-target="brands">›</button>
         </div>
       </div>
     </section>
@@ -157,11 +170,28 @@
           <div><div class="eyebrow">Portfólio</div><h2>Histórias em imagem.</h2></div>
           <p>Conteúdo para marcas, eventos e momentos que merecem ser lembrados.</p>
         </div>
-        <div class="portfolio">
-          <article class="project"><span class="tag">Conteúdo para marcas</span><div><h3>Produtos, pessoas e propósito.</h3><p>Produção de conteúdo para negócios locais.</p></div></article>
-          <article class="project"><span class="tag">Eventos</span><div><h3>Momentos que ficam.</h3><p>Aniversários e celebrações.</p></div></article>
-          <article class="project"><span class="tag">Universo equestre</span><div><h3>Paixão em cada detalhe.</h3><p>Provas e eventos equestres.</p></div></article>
-          <article class="project"><span class="tag">Foto e vídeo</span><div><h3>Uma nova forma de apresentar sua marca.</h3><p>Conteúdo pensado para redes sociais.</p></div></article>
+        <div class="eyebrow" style="margin:0 0 18px">Vídeos</div>
+        <div class="carousel-shell">
+          <button class="carousel-arrow prev" type="button" aria-label="Vídeos anteriores" data-target="videos">‹</button>
+          <div class="video-carousel" id="videos" aria-label="Carrossel de vídeos do portfólio">
+            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_5637BB8E-BDD2-4BE9-9DE8-F1D23F112A1F.mov" type="video/quicktime"></video><h3>Lavateria</h3><p>Conteúdo para marca</p></article>
+            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_A1DB1DB4-B289-4FD3-86EF-5FAC17DE1016.mov" type="video/quicktime"></video><h3>Rodeio e três tambores</h3><p>Eventos e universo equestre</p></article>
+            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_2C3FA30F-A37A-44DE-82C0-ACF350250209.mov" type="video/quicktime"></video><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
+            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_3A317748-02D3-4D5A-807F-74130A87BAB3.mov" type="video/quicktime"></video><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
+            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_4A9B43AA-F16E-4FA7-93C9-1BBF7D08F9C8.mov" type="video/quicktime"></video><h3>Vídeo institucional</h3><p>Apresentação de marca</p></article>
+          </div>
+          <button class="carousel-arrow next" type="button" aria-label="Próximos vídeos" data-target="videos">›</button>
+        </div>
+        <div class="eyebrow" style="margin:42px 0 18px">Fotografia</div>
+        <div class="carousel-shell">
+          <button class="carousel-arrow prev" type="button" aria-label="Fotos anteriores" data-target="photos">‹</button>
+          <div class="photo-carousel" id="photos" aria-label="Carrossel de fotografias">
+            <div class="photo-card"><img src="IMG_3232.jpeg" alt="Casa da Fazenda"><span>Casa da Fazenda</span></div>
+            <div class="photo-card"><img src="copy_F6A22168-E228-4EEF-82D4-CB89E4A21C4D.jpeg" alt="Montara Country"><span>Montara Country</span></div>
+            <div class="photo-card"><img src="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg" alt="Rodeio Hats"><span>Rodeio Hats</span></div>
+            <div class="photo-card"><img src="229230C1-9B78-47B4-B617-573D1C2CD194.jpeg" alt="Lavateria"><span>Lavateria</span></div>
+          </div>
+          <button class="carousel-arrow next" type="button" aria-label="Próximas fotos" data-target="photos">›</button>
         </div>
       </div>
     </section>
@@ -208,5 +238,24 @@
     </section>
   </main>
   <footer><div class="wrap foot"><strong>DG VIDEOMAKER · MOBILE</strong><span>São José dos Campos, Santa Isabel e região</span><span>© 2026 DG Videomaker</span></div></footer>
+  <script>
+    document.querySelectorAll('.carousel-arrow').forEach(button => {
+      button.addEventListener('click', () => {
+        const track = document.getElementById(button.dataset.target);
+        if (!track) return;
+        const direction = button.classList.contains('next') ? 1 : -1;
+        track.scrollBy({left: direction * track.clientWidth * .82, behavior:'smooth'});
+      });
+    });
+    const brandTrack = document.getElementById('brands');
+    if (brandTrack && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      let brandTimer = setInterval(() => {
+        const end = brandTrack.scrollWidth - brandTrack.clientWidth;
+        brandTrack.scrollTo({left: brandTrack.scrollLeft >= end - 8 ? 0 : brandTrack.scrollLeft + brandTrack.clientWidth * .72, behavior:'smooth'});
+      }, 3200);
+      brandTrack.addEventListener('mouseenter', () => clearInterval(brandTimer), {once:true});
+      brandTrack.addEventListener('touchstart', () => clearInterval(brandTimer), {once:true, passive:true});
+    }
+  </script>
 </body>
 </html>
