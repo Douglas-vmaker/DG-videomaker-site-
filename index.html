@@ -57,6 +57,12 @@
     .video-sound:hover{background:#fff;color:#090909}
     .video-card.is-active{border-color:#777}
     .video-card h3{font-size:16px;margin:14px 8px 4px;letter-spacing:-.02em}
+    .photo-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 14px}
+    .photo-carousel::-webkit-scrollbar{display:none}
+    .photo-slide{flex:0 0 min(290px,78vw);aspect-ratio:4/5;overflow:hidden;scroll-snap-align:start;background:#151515;border:1px solid #303030}
+    .photo-slide img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .photo-slide:hover img{transform:scale(1.035)}
+
     .video-card p{font-size:12px;color:var(--muted);margin:0 8px 10px}
     .services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 54px}
     .service{padding:25px 0;border-top:1px solid var(--line);display:flex;gap:22px}
@@ -196,6 +202,41 @@
 
           </div>
           <button class="carousel-arrow next" type="button" aria-label="Próximos vídeos" data-target="videos">›</button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="fotos">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Fotografia</div><h2>Detalhes que contam histórias.</h2></div>
+          <p>Uma seleção de imagens produzidas para marcas, produtos, espaços e momentos especiais.</p>
+        </div>
+        <div class="carousel-shell">
+          <button class="carousel-arrow prev" type="button" aria-label="Fotos anteriores" data-target="photos">‹</button>
+          <div class="photo-carousel" id="photos" aria-label="Carrossel de fotografias do portfólio">
+            <figure class="photo-slide"><img src="229230C1-9B78-47B4-B617-573D1C2CD194.jpeg" alt="Fotografia do portfólio DG Videomaker 01" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="8381BF9F-E38C-46D8-8FD5-10F32ECBB082.jpeg" alt="Fotografia do portfólio DG Videomaker 02" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="IMG_3232.jpeg" alt="Fotografia do portfólio DG Videomaker 03" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="IMG_5950.jpeg" alt="Fotografia do portfólio DG Videomaker 04" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="IMG_5955.jpeg" alt="Fotografia do portfólio DG Videomaker 05" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="IMG_5958.jpeg" alt="Fotografia do portfólio DG Videomaker 06" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="IMG_6132.jpeg" alt="Fotografia do portfólio DG Videomaker 07" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="IMG_6189.jpeg" alt="Fotografia do portfólio DG Videomaker 08" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="IMG_6227.jpeg" alt="Fotografia do portfólio DG Videomaker 09" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="IMG_6461.jpeg" alt="Fotografia do portfólio DG Videomaker 10" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="IMG_7254.jpeg" alt="Fotografia do portfólio DG Videomaker 11" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="SCRL_0002.jpeg" alt="Fotografia do portfólio DG Videomaker 12" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="SCRL_0003.jpeg" alt="Fotografia do portfólio DG Videomaker 13" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="SCRL_0004.jpeg" alt="Fotografia do portfólio DG Videomaker 14" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="SCRL_0006.jpeg" alt="Fotografia do portfólio DG Videomaker 15" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg" alt="Fotografia do portfólio DG Videomaker 16" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="copy_2D7214A3-0704-45FC-B007-44C5B389458A.jpeg" alt="Fotografia do portfólio DG Videomaker 17" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="copy_7FDF4888-C479-448F-ABB5-B3B776DEAA53.jpeg" alt="Fotografia do portfólio DG Videomaker 18" loading="lazy"></figure>
+            <figure class="photo-slide"><img src="copy_F6A22168-E228-4EEF-82D4-CB89E4A21C4D.jpeg" alt="Fotografia do portfólio DG Videomaker 19" loading="lazy"></figure>
+          </div>
+          <button class="carousel-arrow next" type="button" aria-label="Próximas fotos" data-target="photos">›</button>
         </div>
       </div>
     </section>
