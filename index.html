@@ -58,8 +58,9 @@
     .video-card.is-active{border-color:#777}
     .video-card h3{font-size:16px;margin:14px 8px 4px;letter-spacing:-.02em}
     .video-card p{font-size:12px;color:var(--muted);margin:0 8px 10px}
-    .photo-card{flex:0 0 min(280px,76vw);scroll-snap-align:start;position:relative;aspect-ratio:9/16;max-height:480px;background:#111;border:1px solid #303030;overflow:hidden}
-    .photo-card img{width:100%;height:100%;object-fit:contain;display:block;background:#090909}
+    .photo-carousel{display:block;column-count:3;column-gap:12px;padding:4px 2px}
+    .photo-card{display:inline-block;width:100%;margin:0 0 12px;break-inside:avoid;position:relative;background:#111;border:1px solid #303030;overflow:hidden;padding:5px}
+    .photo-card img{width:100%;height:auto;object-fit:contain;display:block;background:#090909}
     .services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 54px}
     .service{padding:25px 0;border-top:1px solid var(--line);display:flex;gap:22px}
     .num{font-size:11px;color:#777;padding-top:5px}.service h3{font-size:21px;margin:0 0 7px;letter-spacing:-.03em}.service p{font-size:13px;color:var(--muted);margin:0;max-width:390px}
@@ -102,6 +103,8 @@
       .hero-actions{gap:9px;margin-top:54px}.hero .button{min-height:48px;padding:0 19px}
       section{padding:48px 0}.section-head{margin-bottom:26px}.section-head p{margin-top:10px}
       .brand-slide{flex-basis:72%;min-width:0;aspect-ratio:16/9;height:auto;padding:0}.carousel-arrow{width:36px;height:36px}.carousel-arrow.prev{left:-10px}.carousel-arrow.next{right:-10px}
+      .photo-carousel{column-count:2;column-gap:9px;padding:3px 1px}
+      .photo-card{margin-bottom:9px;padding:4px}
       .services{grid-template-columns:1fr;gap:0}
       .portfolio{grid-template-columns:1fr}.project{min-height:230px}
       .about{grid-template-columns:1fr;gap:20px}
@@ -199,8 +202,7 @@
         </div>
         <div class="eyebrow" style="margin:42px 0 18px">Fotografias</div>
         <div class="carousel-shell">
-          <button class="carousel-arrow prev" type="button" aria-label="Fotografias anteriores" data-target="photos">‹</button>
-          <div class="photo-carousel" id="photos" aria-label="Carrossel de fotografias do portfólio">
+          <div class="photo-carousel" id="photos" aria-label="Galeria de fotografias do portfólio">
             <article class="photo-card"><img src="IMG_5950.jpeg" alt="Fotografia do portfólio DG Videomaker" loading="lazy"></article>
             <article class="photo-card"><img src="IMG_5955.jpeg" alt="Fotografia do portfólio DG Videomaker" loading="lazy"></article>
             <article class="photo-card"><img src="IMG_5958.jpeg" alt="Fotografia do portfólio DG Videomaker" loading="lazy"></article>
@@ -209,7 +211,6 @@
             <article class="photo-card"><img src="copy_2D7214A3-0704-45FC-B007-44C5B389458A.jpeg" alt="Fotografia do portfólio DG Videomaker" loading="lazy"></article>
             <article class="photo-card"><img src="copy_7FDF4888-C479-448F-ABB5-B3B776DEAA53.jpeg" alt="Fotografia do portfólio DG Videomaker" loading="lazy"></article>
           </div>
-          <button class="carousel-arrow next" type="button" aria-label="Próximas fotografias" data-target="photos">›</button>
         </div>
       </div>
     </section>
