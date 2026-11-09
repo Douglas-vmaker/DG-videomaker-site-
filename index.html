@@ -19,7 +19,7 @@
     .links{display:flex;gap:30px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#d0d0cd}
     .links a:hover,.text-link:hover{color:#fff}
     .hero{position:relative;isolation:isolate;overflow:hidden;min-height:720px;display:flex;align-items:flex-end;padding:190px 0 92px;background:#090909}
-    .hero:before{content:"";position:absolute;z-index:-2;inset:0;background-image:url('8381BF9F-E38C-46D8-8FD5-10F32ECBB082.jpeg');background-repeat:no-repeat;background-position:68% center;background-size:cover;transform:scaleX(-1)}
+    .hero:before{content:"";position:absolute;z-index:-2;inset:0;background-image:url('8381BF9F-E38C-46D8-8FD5-10F32ECBB082.jpeg');background-repeat:no-repeat;background-position:72% center;background-size:auto 90%;transform:scaleX(-1)}
     .hero:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(9,9,9,.97) 0%,rgba(9,9,9,.86) 36%,rgba(9,9,9,.34) 67%,rgba(9,9,9,.08) 100%)}
     .hero .wrap{position:relative;z-index:1}
     .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#b7b7b2}
@@ -41,8 +41,12 @@
     .carousel-shell{position:relative}
     .brand-carousel,.video-carousel,.photo-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 14px}
     .brand-carousel::-webkit-scrollbar,.video-carousel::-webkit-scrollbar,.photo-carousel::-webkit-scrollbar{display:none}
-    .brand-slide{flex:0 0 25%;min-width:190px;height:170px;display:flex;align-items:center;justify-content:center;padding:28px;background:#f4f4f1;border:1px solid #ddd;scroll-snap-align:start}
-    .brand-slide img{width:100%;height:100%;object-fit:contain;display:block}
+    .brand-slide{flex:0 0 25%;min-width:190px;height:170px;display:flex;align-items:center;justify-content:center;padding:14px;border:1px solid rgba(255,255,255,.12);scroll-snap-align:start;overflow:hidden}
+    .brand-slide img{width:94%;height:94%;object-fit:contain;display:block}
+    .brand-casa{background:#dce7d6;border-color:#c7d4c0}
+    .brand-montara{background:#3B2321;border-color:#563a37}
+    .brand-rodeio{background:#111;border-color:#333}
+    .brand-lavateria{background:#e8e8e8;border-color:#d5d5d5}
     .carousel-arrow{position:absolute;z-index:2;top:50%;transform:translateY(-50%);width:42px;height:42px;border:1px solid #777;border-radius:50%;background:rgba(9,9,9,.9);color:#fff;font-size:27px;line-height:1;cursor:pointer}
     .carousel-arrow:hover{background:#fff;color:#090909}
     .carousel-arrow.prev{left:-18px}.carousel-arrow.next{right:-18px}
@@ -51,7 +55,7 @@
     .video-card h3{font-size:16px;margin:14px 8px 4px;letter-spacing:-.02em}
     .video-card p{font-size:12px;color:var(--muted);margin:0 8px 10px}
     .photo-card{flex:0 0 min(430px,82vw);scroll-snap-align:start;position:relative;aspect-ratio:4/3;background:#111;overflow:hidden}
-    .photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo-card img{width:100%;height:100%;object-fit:cover;display:block}.photo-rodeio img{object-position:center top}
     .photo-card span{position:absolute;left:0;right:0;bottom:0;padding:28px 18px 14px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:16px;font-weight:700}
     .services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 54px}
     .service{padding:25px 0;border-top:1px solid var(--line);display:flex;gap:22px}
@@ -84,7 +88,7 @@
       .wrap{width:min(var(--max),calc(100% - 36px))}
       .nav{height:86px}.brand img{width:190px;max-height:70px}.links{gap:13px;font-size:9px}.links a:nth-child(2){display:none}
       .hero{min-height:680px;padding:155px 0 58px}
-      .hero:before{background-position:64% center;background-size:cover}
+      .hero:before{background-position:68% center;background-size:auto 86%}
       .hero:after{background:linear-gradient(90deg,rgba(9,9,9,.95),rgba(9,9,9,.72) 52%,rgba(9,9,9,.24))}
       .hero-bottom,.section-head{display:block}.intro{margin-bottom:25px}
       section{padding:76px 0}.section-head p{margin-top:18px}
@@ -137,10 +141,10 @@
         <div class="carousel-shell">
           <button class="carousel-arrow prev" type="button" aria-label="Marcas anteriores" data-target="brands">‹</button>
           <div class="brand-carousel" id="brands" aria-label="Marcas atendidas">
-            <div class="brand-slide"><img src="Design sem nome - 1.png" alt="Logo Casa da Fazenda"></div>
-            <div class="brand-slide"><img src="Design sem nome - 2.png" alt="Logo Montara Country"></div>
-            <div class="brand-slide"><img src="Design sem nome - 3.png" alt="Logo Rodeio Hats"></div>
-            <div class="brand-slide"><img src="Design sem nome - 4.png" alt="Logo Lavateria"></div>
+            <div class="brand-slide brand-casa"><img src="Design sem nome - 1.png" alt="Logo Casa da Fazenda"></div>
+            <div class="brand-slide brand-montara"><img src="Design sem nome - 2.png" alt="Logo Montara Country"></div>
+            <div class="brand-slide brand-rodeio"><img src="Design sem nome - 3.png" alt="Logo Rodeio Hats"></div>
+            <div class="brand-slide brand-lavateria"><img src="Design sem nome - 4.png" alt="Logo Lavateria"></div>
           </div>
           <button class="carousel-arrow next" type="button" aria-label="Próximas marcas" data-target="brands">›</button>
         </div>
@@ -174,11 +178,11 @@
         <div class="carousel-shell">
           <button class="carousel-arrow prev" type="button" aria-label="Vídeos anteriores" data-target="videos">‹</button>
           <div class="video-carousel" id="videos" aria-label="Carrossel de vídeos do portfólio">
-            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_5637BB8E-BDD2-4BE9-9DE8-F1D23F112A1F.mov" type="video/quicktime"></video><h3>Lavateria</h3><p>Conteúdo para marca</p></article>
-            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_A1DB1DB4-B289-4FD3-86EF-5FAC17DE1016.mov" type="video/quicktime"></video><h3>Rodeio e três tambores</h3><p>Eventos e universo equestre</p></article>
-            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_2C3FA30F-A37A-44DE-82C0-ACF350250209.mov" type="video/quicktime"></video><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
-            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_3A317748-02D3-4D5A-807F-74130A87BAB3.mov" type="video/quicktime"></video><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
-            <article class="video-card"><video controls playsinline preload="metadata"><source src="copy_4A9B43AA-F16E-4FA7-93C9-1BBF7D08F9C8.mov" type="video/quicktime"></video><h3>Vídeo institucional</h3><p>Apresentação de marca</p></article>
+            <article class="video-card"><video controls playsinline preload="metadata" poster="229230C1-9B78-47B4-B617-573D1C2CD194.jpeg"><source src="copy_5637BB8E-BDD2-4BE9-9DE8-F1D23F112A1F.mov" type="video/quicktime"></video><h3>Lavateria</h3><p>Conteúdo para marca</p></article>
+            <article class="video-card"><video controls playsinline preload="metadata" poster="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg"><source src="copy_A1DB1DB4-B289-4FD3-86EF-5FAC17DE1016.mov" type="video/quicktime"></video><h3>Rodeio e três tambores</h3><p>Eventos e universo equestre</p></article>
+            <article class="video-card"><video controls playsinline preload="metadata" poster="IMG_3232.jpeg"><source src="copy_2C3FA30F-A37A-44DE-82C0-ACF350250209.mov" type="video/quicktime"></video><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
+            <article class="video-card"><video controls playsinline preload="metadata" poster="copy_F6A22168-E228-4EEF-82D4-CB89E4A21C4D.jpeg"><source src="copy_3A317748-02D3-4D5A-807F-74130A87BAB3.mov" type="video/quicktime"></video><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
+            <article class="video-card"><video controls playsinline preload="metadata" poster="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg"><source src="copy_4A9B43AA-F16E-4FA7-93C9-1BBF7D08F9C8.mov" type="video/quicktime"></video><h3>Vídeo institucional</h3><p>Apresentação de marca</p></article>
           </div>
           <button class="carousel-arrow next" type="button" aria-label="Próximos vídeos" data-target="videos">›</button>
         </div>
@@ -188,7 +192,7 @@
           <div class="photo-carousel" id="photos" aria-label="Carrossel de fotografias">
             <div class="photo-card"><img src="IMG_3232.jpeg" alt="Casa da Fazenda"><span>Casa da Fazenda</span></div>
             <div class="photo-card"><img src="copy_F6A22168-E228-4EEF-82D4-CB89E4A21C4D.jpeg" alt="Montara Country"><span>Montara Country</span></div>
-            <div class="photo-card"><img src="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg" alt="Rodeio Hats"><span>Rodeio Hats</span></div>
+            <div class="photo-card photo-rodeio"><img src="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg" alt="Rodeio Hats"><span>Rodeio Hats</span></div>
             <div class="photo-card"><img src="229230C1-9B78-47B4-B617-573D1C2CD194.jpeg" alt="Lavateria"><span>Lavateria</span></div>
           </div>
           <button class="carousel-arrow next" type="button" aria-label="Próximas fotos" data-target="photos">›</button>
