@@ -14,12 +14,12 @@
     a{color:inherit;text-decoration:none}
     .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
     header{position:absolute;top:0;left:0;width:100%;z-index:2;border-bottom:1px solid rgba(255,255,255,.13)}
-    .nav{height:100px;display:flex;align-items:center;justify-content:space-between}
-    .brand img{display:block;width:250px;height:auto;max-height:90px;object-fit:contain;object-position:left center}
+    .nav{height:86px;display:flex;align-items:center;justify-content:space-between}
+    .brand img{display:block;width:290px;height:auto;max-height:82px;object-fit:contain;object-position:left center}
     .links{display:flex;gap:30px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#d0d0cd}
     .links a:hover,.text-link:hover{color:#fff}
-    .hero{position:relative;isolation:isolate;overflow:hidden;min-height:720px;display:flex;align-items:flex-end;padding:190px 0 92px;background:#090909}
-    .hero:before{content:"";position:absolute;z-index:-2;inset:0;background-image:url('8381BF9F-E38C-46D8-8FD5-10F32ECBB082.jpeg');background-repeat:no-repeat;background-position:72% center;background-size:auto 90%;transform:scaleX(-1)}
+    .hero{position:relative;isolation:isolate;overflow:hidden;min-height:720px;display:flex;align-items:flex-end;padding:190px 0 124px;background:#090909}
+    .hero:before{content:"";position:absolute;z-index:-2;inset:0;background-image:url('8381BF9F-E38C-46D8-8FD5-10F32ECBB082.jpeg');background-repeat:no-repeat;background-position:72% center;background-size:auto 78%;opacity:.48;transform:scaleX(-1)}
     .hero:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(9,9,9,.97) 0%,rgba(9,9,9,.86) 36%,rgba(9,9,9,.34) 67%,rgba(9,9,9,.08) 100%)}
     .hero .wrap{position:relative;z-index:1}
     .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#b7b7b2}
@@ -41,8 +41,8 @@
     .carousel-shell{position:relative}
     .brand-carousel,.video-carousel,.photo-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 14px}
     .brand-carousel::-webkit-scrollbar,.video-carousel::-webkit-scrollbar,.photo-carousel::-webkit-scrollbar{display:none}
-    .brand-slide{flex:0 0 25%;min-width:190px;height:170px;display:flex;align-items:center;justify-content:center;padding:14px;border:1px solid rgba(255,255,255,.12);scroll-snap-align:start;overflow:hidden}
-    .brand-slide img{width:94%;height:94%;object-fit:contain;display:block}
+    .brand-slide{flex:0 0 25%;min-width:0;aspect-ratio:16/9;height:auto;display:flex;align-items:center;justify-content:center;padding:0;border:1px solid rgba(255,255,255,.12);scroll-snap-align:start;overflow:hidden}
+    .brand-slide img{width:100%;height:100%;object-fit:contain;display:block}
     .brand-casa{background:#dce7d6;border-color:#c7d4c0}
     .brand-montara{background:#3B2321;border-color:#563a37}
     .brand-rodeio{background:#111;border-color:#333}
@@ -86,13 +86,13 @@
     .foot{display:flex;justify-content:space-between;gap:20px}
     @media(max-width:700px){
       .wrap{width:min(var(--max),calc(100% - 36px))}
-      .nav{height:86px}.brand img{width:190px;max-height:70px}.links{gap:13px;font-size:9px}.links a:nth-child(2){display:none}
-      .hero{min-height:680px;padding:155px 0 58px}
-      .hero:before{background-position:68% center;background-size:auto 86%}
+      .nav{height:78px}.brand img{width:215px;max-height:68px}.links{gap:13px;font-size:9px}.links a:nth-child(2){display:none}
+      .hero{min-height:680px;padding:155px 0 88px}
+      .hero:before{background-position:68% center;background-size:auto 74%;opacity:.43}
       .hero:after{background:linear-gradient(90deg,rgba(9,9,9,.95),rgba(9,9,9,.72) 52%,rgba(9,9,9,.24))}
       .hero-bottom,.section-head{display:block}.intro{margin-bottom:25px}
       section{padding:76px 0}.section-head p{margin-top:18px}
-      .brand-slide{flex-basis:72%;min-width:210px;height:140px;padding:22px}.carousel-arrow{width:36px;height:36px}.carousel-arrow.prev{left:-10px}.carousel-arrow.next{right:-10px}
+      .brand-slide{flex-basis:72%;min-width:0;aspect-ratio:16/9;height:auto;padding:0}.carousel-arrow{width:36px;height:36px}.carousel-arrow.prev{left:-10px}.carousel-arrow.next{right:-10px}
       .services{grid-template-columns:1fr;gap:0}
       .portfolio{grid-template-columns:1fr}.project{min-height:230px}
       .about{grid-template-columns:1fr;gap:20px}
