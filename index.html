@@ -51,7 +51,7 @@
     .carousel-arrow:hover{background:#fff;color:#090909}
     .carousel-arrow.prev{left:-18px}.carousel-arrow.next{right:-18px}
     .video-card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:#121212;border:1px solid #303030;padding:10px}
-    .video-card video{width:100%;aspect-ratio:9/16;max-height:480px;object-fit:cover;display:block;background:#000}
+    .video-card video{width:100%;aspect-ratio:9/16;max-height:480px;object-fit:cover;display:block;background:transparent}
     .video-card h3{font-size:16px;margin:14px 8px 4px;letter-spacing:-.02em}
     .video-card p{font-size:12px;color:var(--muted);margin:0 8px 10px}
     .photo-card{flex:0 0 min(430px,82vw);scroll-snap-align:start;position:relative;aspect-ratio:4/3;background:#111;overflow:hidden}
@@ -86,9 +86,9 @@
     .foot{display:flex;justify-content:space-between;gap:20px}
     @media(max-width:700px){
       .wrap{width:min(var(--max),calc(100% - 28px))}
-      .nav{height:112px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:5px}
-      .brand img{width:250px;max-height:76px}
-      .links{width:100%;display:flex;justify-content:flex-start;gap:19px;font-size:9px;letter-spacing:.04em;white-space:nowrap}
+      .nav{height:82px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px}
+      .brand{flex:0 0 auto}.brand img{width:198px;max-height:76px}
+      .links{flex:1;min-width:0;display:flex;justify-content:flex-start;gap:9px;font-size:8px;letter-spacing:0;white-space:nowrap}
       .links a:nth-child(2){display:block}
       .hero{min-height:590px;padding:8px 0 78px}
       .hero:before{background-position:68% center;background-size:auto 74%;opacity:.43}
@@ -96,14 +96,14 @@
       .hero .eyebrow{font-size:10px;letter-spacing:.18em}
       .hero h1{margin:17px 0 16px}
       .hero-bottom,.section-head{display:block}.intro{margin-bottom:16px}
-      .hero-actions{gap:9px;margin-top:30px}.hero .button{min-height:48px;padding:0 19px}
-      section{padding:54px 0}.section-head{margin-bottom:30px}.section-head p{margin-top:12px}
+      .hero-actions{gap:9px;margin-top:46px}.hero .button{min-height:48px;padding:0 19px}
+      section{padding:48px 0}.section-head{margin-bottom:26px}.section-head p{margin-top:10px}
       .brand-slide{flex-basis:72%;min-width:0;aspect-ratio:16/9;height:auto;padding:0}.carousel-arrow{width:36px;height:36px}.carousel-arrow.prev{left:-10px}.carousel-arrow.next{right:-10px}
       .services{grid-template-columns:1fr;gap:0}
       .portfolio{grid-template-columns:1fr}.project{min-height:230px}
       .about{grid-template-columns:1fr;gap:20px}
       .steps{grid-template-columns:1fr;gap:28px}
-      .contact{padding:56px 0}
+      .contact{padding:48px 0}
       .foot{display:block}.foot span{display:block;margin-top:8px}
     }
   </style>
