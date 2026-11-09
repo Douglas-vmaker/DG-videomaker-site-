@@ -50,8 +50,12 @@
     .carousel-arrow{position:absolute;z-index:2;top:50%;transform:translateY(-50%);width:42px;height:42px;border:1px solid #777;border-radius:50%;background:rgba(9,9,9,.9);color:#fff;font-size:27px;line-height:1;cursor:pointer}
     .carousel-arrow:hover{background:#fff;color:#090909}
     .carousel-arrow.prev{left:-18px}.carousel-arrow.next{right:-18px}
-    .video-card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:#121212;border:1px solid #303030;padding:10px}
-    .video-card video{width:100%;aspect-ratio:9/16;max-height:480px;object-fit:cover;display:block;background:transparent}
+    .video-card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:#121212;border:1px solid #303030;padding:10px;position:relative}
+    .video-frame{position:relative;overflow:hidden;background:#090909;aspect-ratio:9/16;max-height:480px}
+    .video-card video{width:100%;height:100%;object-fit:cover;display:block;background:#090909}
+    .video-sound{position:absolute;right:12px;top:12px;z-index:2;min-height:36px;padding:0 12px;border:1px solid rgba(255,255,255,.65);border-radius:30px;background:rgba(9,9,9,.72);color:#fff;font:inherit;font-size:10px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(8px)}
+    .video-sound:hover{background:#fff;color:#090909}
+    .video-card.is-active{border-color:#777}
     .video-card h3{font-size:16px;margin:14px 8px 4px;letter-spacing:-.02em}
     .video-card p{font-size:12px;color:var(--muted);margin:0 8px 10px}
     .photo-card{flex:0 0 min(430px,82vw);scroll-snap-align:start;position:relative;aspect-ratio:4/3;background:#111;overflow:hidden}
@@ -184,12 +188,12 @@
         <div class="carousel-shell">
           <button class="carousel-arrow prev" type="button" aria-label="Vídeos anteriores" data-target="videos">‹</button>
           <div class="video-carousel" id="videos" aria-label="Carrossel de vídeos do portfólio">
-            <article class="video-card"><video controls playsinline preload="auto"><source src="copy_5637BB8E-BDD2-4BE9-9DE8-F1D23F112A1F.mov" type="video/quicktime"></video><h3>Lavateria</h3><p>Conteúdo para marca</p></article>
-            <article class="video-card"><video controls playsinline preload="auto"><source src="copy_A1DB1DB4-B289-4FD3-86EF-5FAC17DE1016.mov" type="video/quicktime"></video><h3>Rodeio e três tambores</h3><p>Eventos e universo equestre</p></article>
-            <article class="video-card"><video controls playsinline preload="auto"><source src="copy_2C3FA30F-A37A-44DE-82C0-ACF350250209.mov" type="video/quicktime"></video><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
-            <article class="video-card"><video controls playsinline preload="auto"><source src="copy_3A317748-02D3-4D5A-807F-74130A87BAB3.mov" type="video/quicktime"></video><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
-            <article class="video-card"><video controls playsinline preload="auto"><source src="copy_4A9B43AA-F16E-4FA7-93C9-1BBF7D08F9C8.mov" type="video/quicktime"></video><h3>Vídeo institucional</h3><p>Apresentação de marca</p></article>
-            <article class="video-card"><video controls playsinline preload="auto"><source src="copy_F5CC1FFD-E3A3-4558-9BC1-78723EBB8102.mov" type="video/quicktime"></video><h3>Rodeio Hats</h3><p>Conteúdo para chapelaria</p></article>
+            <article class="video-card"><div class="video-frame"><video muted autoplay loop playsinline webkit-playsinline preload="metadata"><source src="copy_5637BB8E-BDD2-4BE9-9DE8-F1D23F112A1F.mov" type="video/quicktime"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Lavateria</h3><p>Conteúdo para marca</p></article>
+            <article class="video-card"><div class="video-frame"><video muted autoplay loop playsinline webkit-playsinline preload="metadata"><source src="copy_A1DB1DB4-B289-4FD3-86EF-5FAC17DE1016.mov" type="video/quicktime"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Rodeio e três tambores</h3><p>Eventos e universo equestre</p></article>
+            <article class="video-card"><div class="video-frame"><video muted autoplay loop playsinline webkit-playsinline preload="metadata"><source src="copy_2C3FA30F-A37A-44DE-82C0-ACF350250209.mov" type="video/quicktime"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
+            <article class="video-card"><div class="video-frame"><video muted autoplay loop playsinline webkit-playsinline preload="metadata"><source src="copy_3A317748-02D3-4D5A-807F-74130A87BAB3.mov" type="video/quicktime"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Portfólio em vídeo</h3><p>Produção audiovisual</p></article>
+            <article class="video-card"><div class="video-frame"><video muted autoplay loop playsinline webkit-playsinline preload="metadata"><source src="copy_4A9B43AA-F16E-4FA7-93C9-1BBF7D08F9C8.mov" type="video/quicktime"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Vídeo institucional</h3><p>Apresentação de marca</p></article>
+            <article class="video-card"><div class="video-frame"><video muted autoplay loop playsinline webkit-playsinline preload="metadata"><source src="copy_F5CC1FFD-E3A3-4558-9BC1-78723EBB8102.mov" type="video/quicktime"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Rodeio Hats</h3><p>Conteúdo para chapelaria</p></article>
           </div>
           <button class="carousel-arrow next" type="button" aria-label="Próximos vídeos" data-target="videos">›</button>
         </div>
@@ -247,6 +251,65 @@
         track.scrollBy({left: direction * track.clientWidth * .82, behavior:'smooth'});
       });
     });
+    const videoTrack = document.getElementById('videos');
+    if (videoTrack) {
+      const videoCards = [...videoTrack.querySelectorAll('.video-card')];
+      const videoObserver = new IntersectionObserver(entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (!visible.length) return;
+        const activeCard = visible[0].target;
+        videoCards.forEach(card => {
+          const video = card.querySelector('video');
+          const isActive = card === activeCard;
+          card.classList.toggle('is-active', isActive);
+          if (isActive) {
+            video.muted = !card.dataset.soundEnabled;
+            const playAttempt = video.play();
+            if (playAttempt && playAttempt.catch) playAttempt.catch(() => {});
+          } else {
+            video.pause();
+            video.muted = true;
+          }
+        });
+      }, {root: videoTrack, threshold: [0.35, 0.6, 0.8]});
+
+      videoCards.forEach(card => {
+        const video = card.querySelector('video');
+        const soundButton = card.querySelector('.video-sound');
+        videoObserver.observe(card);
+        soundButton.addEventListener('click', () => {
+          const enableSound = video.muted;
+          videoCards.forEach(otherCard => {
+            otherCard.dataset.soundEnabled = 'false';
+            otherCard.querySelector('video').muted = true;
+            const otherButton = otherCard.querySelector('.video-sound');
+            otherButton.textContent = 'Ativar som';
+            otherButton.setAttribute('aria-label', 'Ativar som do vídeo');
+          });
+          if (enableSound) {
+            card.dataset.soundEnabled = 'true';
+            video.muted = false;
+            soundButton.textContent = 'Desativar som';
+            soundButton.setAttribute('aria-label', 'Desativar som do vídeo');
+            const playAttempt = video.play();
+            if (playAttempt && playAttempt.catch) playAttempt.catch(() => {});
+          }
+        });
+      });
+
+      videoTrack.addEventListener('scroll', () => {
+        videoCards.forEach(card => {
+          if (!card.classList.contains('is-active')) {
+            const video = card.querySelector('video');
+            video.pause();
+            video.muted = true;
+          }
+        });
+      }, {passive:true});
+    }
+
     const brandTrack = document.getElementById('brands');
     if (brandTrack && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       let brandTimer = setInterval(() => {
