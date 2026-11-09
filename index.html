@@ -57,11 +57,6 @@
     .video-sound:hover{background:#fff;color:#090909}
     .video-card.is-active{border-color:#777}
     .video-card h3{font-size:16px;margin:14px 8px 4px;letter-spacing:-.02em}
-    .photo-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 14px}
-    .photo-carousel::-webkit-scrollbar{display:none}
-    .photo-slide{flex:0 0 min(290px,78vw);aspect-ratio:4/5;overflow:hidden;scroll-snap-align:start;background:#151515;border:1px solid #303030}
-    .photo-slide img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-    .photo-slide:hover img{transform:scale(1.035)}
 
     .video-card p{font-size:12px;color:var(--muted);margin:0 8px 10px}
     .services{display:grid;grid-template-columns:repeat(2,1fr);gap:0 54px}
@@ -191,14 +186,14 @@
         <div class="carousel-shell">
           <button class="carousel-arrow prev" type="button" aria-label="Vídeos anteriores" data-target="videos">‹</button>
           <div class="video-carousel" id="videos" aria-label="Carrossel de vídeos do portfólio">
-            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="auto"><source src="copy_F9495355-44A0-4D53-B660-4DAE393CB5CB.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Chalé Refúgio do Campo</h3><p>Conteúdo para hospedagem</p></article>
-            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="auto"><source src="rodeio hats.mp4"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Rodeio Hats</h3><p>Conteúdo para chapelaria</p></article>
-            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="auto"><source src="copy_5637BB8E-BDD2-4BE9-9DE8-F1D23F112A1F.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Lavateria Fast</h3><p>Conteúdo para marca</p></article>
-            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="auto"><source src="copy_A1DB1DB4-B289-4FD3-86EF-5FAC17DE1016.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Rodeio e três tambores</h3><p>Eventos e universo equestre</p></article>
-            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="auto"><source src="isabela.mp4"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Aniversário da Isabela</h3><p>Registro de aniversário</p></article>
-            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="auto"><source src="copy_3A317748-02D3-4D5A-807F-74130A87BAB3.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Lavateria Fast</h3><p>Conteúdo para marca</p></article>
-            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="auto"><source src="copy_4A9B43AA-F16E-4FA7-93C9-1BBF7D08F9C8.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Vídeo institucional</h3><p>Apresentação de marca</p></article>
-            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="auto"><source src="casa da fazenda.mp4"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Casa da Fazenda</h3><p>Conteúdo para agropecuária</p></article>
+            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="none"><source src="copy_F9495355-44A0-4D53-B660-4DAE393CB5CB.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Chalé Refúgio do Campo</h3><p>Conteúdo para hospedagem</p></article>
+            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="none"><source src="rodeio hats.mp4"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Rodeio Hats</h3><p>Conteúdo para chapelaria</p></article>
+            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="none"><source src="copy_5637BB8E-BDD2-4BE9-9DE8-F1D23F112A1F.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Lavateria Fast</h3><p>Conteúdo para marca</p></article>
+            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="none"><source src="copy_A1DB1DB4-B289-4FD3-86EF-5FAC17DE1016.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Rodeio e três tambores</h3><p>Eventos e universo equestre</p></article>
+            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="none"><source src="isabela.mp4"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Aniversário da Isabela</h3><p>Registro de aniversário</p></article>
+            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="none"><source src="copy_3A317748-02D3-4D5A-807F-74130A87BAB3.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Lavateria Fast</h3><p>Conteúdo para marca</p></article>
+            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="none"><source src="copy_4A9B43AA-F16E-4FA7-93C9-1BBF7D08F9C8.mov"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Vídeo institucional</h3><p>Apresentação de marca</p></article>
+            <article class="video-card"><div class="video-frame"><video autoplay muted loop playsinline webkit-playsinline preload="none"><source src="casa da fazenda.mp4"></video><button class="video-sound" type="button" aria-label="Ativar som do vídeo">Ativar som</button></div><h3>Casa da Fazenda</h3><p>Conteúdo para agropecuária</p></article>
 
           </div>
           <button class="carousel-arrow next" type="button" aria-label="Próximos vídeos" data-target="videos">›</button>
@@ -206,40 +201,6 @@
       </div>
     </section>
 
-
-    <section id="fotos">
-      <div class="wrap">
-        <div class="section-head">
-          <div><div class="eyebrow">Fotografia</div><h2>Detalhes que contam histórias.</h2></div>
-          <p>Uma seleção de imagens produzidas para marcas, produtos, espaços e momentos especiais.</p>
-        </div>
-        <div class="carousel-shell">
-          <button class="carousel-arrow prev" type="button" aria-label="Fotos anteriores" data-target="photos">‹</button>
-          <div class="photo-carousel" id="photos" aria-label="Carrossel de fotografias do portfólio">
-            <figure class="photo-slide"><img src="229230C1-9B78-47B4-B617-573D1C2CD194.jpeg" alt="Fotografia do portfólio DG Videomaker 01" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="8381BF9F-E38C-46D8-8FD5-10F32ECBB082.jpeg" alt="Fotografia do portfólio DG Videomaker 02" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="IMG_3232.jpeg" alt="Fotografia do portfólio DG Videomaker 03" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="IMG_5950.jpeg" alt="Fotografia do portfólio DG Videomaker 04" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="IMG_5955.jpeg" alt="Fotografia do portfólio DG Videomaker 05" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="IMG_5958.jpeg" alt="Fotografia do portfólio DG Videomaker 06" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="IMG_6132.jpeg" alt="Fotografia do portfólio DG Videomaker 07" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="IMG_6189.jpeg" alt="Fotografia do portfólio DG Videomaker 08" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="IMG_6227.jpeg" alt="Fotografia do portfólio DG Videomaker 09" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="IMG_6461.jpeg" alt="Fotografia do portfólio DG Videomaker 10" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="IMG_7254.jpeg" alt="Fotografia do portfólio DG Videomaker 11" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="SCRL_0002.jpeg" alt="Fotografia do portfólio DG Videomaker 12" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="SCRL_0003.jpeg" alt="Fotografia do portfólio DG Videomaker 13" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="SCRL_0004.jpeg" alt="Fotografia do portfólio DG Videomaker 14" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="SCRL_0006.jpeg" alt="Fotografia do portfólio DG Videomaker 15" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="copy_09FB201A-ABE0-4D6D-9309-2F91C54E16F4.jpeg" alt="Fotografia do portfólio DG Videomaker 16" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="copy_2D7214A3-0704-45FC-B007-44C5B389458A.jpeg" alt="Fotografia do portfólio DG Videomaker 17" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="copy_7FDF4888-C479-448F-ABB5-B3B776DEAA53.jpeg" alt="Fotografia do portfólio DG Videomaker 18" loading="lazy"></figure>
-            <figure class="photo-slide"><img src="copy_F6A22168-E228-4EEF-82D4-CB89E4A21C4D.jpeg" alt="Fotografia do portfólio DG Videomaker 19" loading="lazy"></figure>
-          </div>
-          <button class="carousel-arrow next" type="button" aria-label="Próximas fotos" data-target="photos">›</button>
-        </div>
-      </div>
-    </section>
 
     <section id="sobre">
       <div class="wrap about">
@@ -323,18 +284,23 @@
           if (!active) {
             video.pause();
             video.muted = true;
+            video.preload = 'none';
             return;
           }
           video.muted = true;
           video.defaultMuted = true;
+          video.autoplay = true;
+          video.playsInline = true;
+          video.preload = 'auto';
+          video.setAttribute('autoplay', '');
           video.setAttribute('muted', '');
           video.setAttribute('playsinline', '');
           video.setAttribute('webkit-playsinline', '');
           const attempt = video.play();
           if (attempt && typeof attempt.catch === 'function') {
             attempt.catch(() => {
-              soundButton.textContent = 'Reproduzir';
-              soundButton.setAttribute('aria-label', 'Reproduzir vídeo');
+              soundButton.textContent = 'Toque para reproduzir';
+              soundButton.setAttribute('aria-label', 'Toque para reproduzir o vídeo');
             });
           }
         });
@@ -353,6 +319,15 @@
         video.setAttribute('playsinline', '');
         video.setAttribute('webkit-playsinline', '');
         video.removeAttribute('controls');
+        video.autoplay = true;
+        video.playsInline = true;
+        video.addEventListener('canplay', () => {
+          if (card.classList.contains('is-active') && video.paused) {
+            video.muted = true;
+            const retry = video.play();
+            if (retry && typeof retry.catch === 'function') retry.catch(() => {});
+          }
+        });
 
         soundButton.addEventListener('click', () => {
           const wasMuted = video.muted;
@@ -364,7 +339,13 @@
             otherButton.textContent = 'Ativar som';
             otherButton.setAttribute('aria-label', 'Ativar som do vídeo');
           });
-          if (wasMuted && card.classList.contains('is-active')) {
+          if (wasMuted && card.classList.contains('is-active') && soundButton.textContent === 'Toque para reproduzir') {
+            video.muted = true;
+            const attempt = video.play();
+            if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {});
+            soundButton.textContent = 'Ativar som';
+            soundButton.setAttribute('aria-label', 'Ativar som do vídeo');
+          } else if (wasMuted && card.classList.contains('is-active')) {
             video.muted = false;
             card.dataset.soundEnabled = 'true';
             soundButton.textContent = 'Desativar som';
