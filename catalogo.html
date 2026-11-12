@@ -4,92 +4,87 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090909">
-  <meta name="description" content="Catálogo de serviços DG Videomaker. Foto, vídeo e conteúdo para marcas, negócios e eventos.">
+  <meta name="description" content="Catálogo DG Videomaker: produção de vídeos, fotografia, Storymaker e tráfego pago em São José dos Campos e região.">
   <title>Serviços | DG Videomaker</title>
   <style>
-    :root{--bg:#090909;--surface:#121212;--surface2:#181818;--text:#f5f5f3;--muted:#a6a6a2;--line:#30302e;--white:#fff;--max:1080px}
+    :root{--bg:#090909;--surface:#141414;--surface2:#1b1b1b;--text:#f5f5f3;--muted:#aaa;--line:#30302e;--white:#fff;--max:1040px}
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:82px}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    html{scroll-behavior:smooth;scroll-padding-top:76px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
     a{color:inherit;text-decoration:none}
-    button{font:inherit}
-    .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.13)}
-    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;min-width:0}
-    .brand img{display:block;width:220px;max-height:68px;object-fit:contain;object-position:left center}
-    .links{display:flex;gap:24px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#d0d0cd}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand img{display:block;width:190px;max-height:60px;object-fit:contain;object-position:left center}
+    .links{display:flex;gap:20px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#ccc}
     .links a:hover{color:#fff}
-    .hero{padding:78px 0 66px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 78% 20%,#252525 0%,#090909 54%)}
-    .eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#aaa}
-    h1{font-size:clamp(48px,9vw,104px);line-height:.9;letter-spacing:-.075em;margin:24px 0 22px;font-weight:800}
+    .hero{padding:70px 0 58px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 78% 18%,#252525 0%,#090909 55%)}
+    .eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#999}
+    h1{font-size:clamp(46px,8vw,88px);line-height:.92;letter-spacing:-.075em;margin:22px 0;font-weight:800}
     h1 span{color:#777}
-    .hero-copy{max-width:520px;color:#c0c0bc;font-size:15px;margin:0}
-    .hero-meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:32px;color:#999;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+    .hero-copy{max-width:510px;color:#c3c3bf;font-size:15px;margin:0}
+    .hero-meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;color:#999;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
     .hero-meta span:before{content:"/";color:#666;margin-right:8px}
-    section{padding:76px 0;border-bottom:1px solid var(--line)}
-    .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:34px}
-    .section-head h2{font-size:clamp(32px,5vw,54px);line-height:.98;letter-spacing:-.06em;margin:10px 0 0}
-    .section-head p{max-width:330px;color:var(--muted);font-size:13px;margin:0}
-    .intro-note{border-left:2px solid #777;padding:12px 16px;color:#aaa;font-size:12px;margin:0 0 28px}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-    .service-card{background:var(--surface);border:1px solid var(--line);padding:25px;display:flex;flex-direction:column;min-width:0}
-    .service-top{display:flex;justify-content:space-between;gap:12px;color:#858580;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
-    .service-card h3{font-size:25px;letter-spacing:-.045em;line-height:1.05;margin:20px 0 10px}
-    .service-card>p{color:#b6b6b1;font-size:13px;margin:0 0 18px}
-    details{border-top:1px solid #343432;margin-top:auto}
-    summary{cursor:pointer;list-style:none;padding:14px 0;color:#eee;font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;justify-content:space-between}
+    section{padding:58px 0;border-bottom:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:26px}
+    .section-head h2{font-size:clamp(30px,4.5vw,48px);line-height:1;letter-spacing:-.06em;margin:9px 0 0}
+    .section-head p{max-width:340px;color:var(--muted);font-size:13px;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .card{background:var(--surface);border:1px solid var(--line);padding:22px;min-width:0}
+    .card.featured{background:var(--surface2);border-color:#777}
+    .tag{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#999}
+    .card h3{font-size:21px;letter-spacing:-.04em;line-height:1.1;margin:14px 0 8px}
+    .card p{font-size:12px;color:#b8b8b3;margin:0}
+    .price{font-size:29px;font-weight:700;letter-spacing:-.05em;margin:18px 0 2px}
+    .period{font-size:10px;color:#999}
+    .card ul{padding-left:17px;margin:15px 0 0;color:#c6c6c1;font-size:12px}
+    .card li{margin:5px 0}
+    .price-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:13px}
+    .price-table td{padding:10px 0;border-bottom:1px solid #343432}
+    .price-table td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+    .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .small-card{background:var(--surface);border:1px solid var(--line);padding:21px}
+    .small-card h3{font-size:19px;margin:0 0 8px}
+    .small-card p{font-size:12px;color:#b8b8b3;margin:0}
+    .extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .extra{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #343432;font-size:13px}
+    .extra strong{white-space:nowrap}
+    .note{font-size:11px;color:#999;margin:14px 0 0}
+    details{border:1px solid var(--line);background:#101010;padding:0 18px}
+    summary{cursor:pointer;list-style:none;padding:16px 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px}
     summary::-webkit-details-marker{display:none}
-    summary:after{content:"+";font-size:20px;color:#aaa}
+    summary:after{content:"+";font-size:18px;color:#aaa}
     details[open] summary:after{content:"−"}
-    .detail-body{padding:0 0 16px;color:#b6b6b1;font-size:13px}
-    .detail-body ul{margin:0;padding-left:18px}
-    .detail-body li{margin:6px 0}
-    .price-area{margin-top:18px;padding-top:16px;border-top:1px solid #343432}
-    .price-label{display:block;color:#858580;font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:7px}
-    .price-value{min-height:31px;display:flex;align-items:center;font-size:19px;font-weight:700;letter-spacing:-.03em}
-    .price-value.is-hidden{filter:blur(7px);user-select:none}
-    .price-help{color:#888;font-size:10px;margin:4px 0 12px}
-    .price-toggle{width:100%;min-height:42px;background:transparent;border:1px solid #777;color:#f5f5f3;font-size:10px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:.2s}
-    .price-toggle:hover{background:#fff;color:#090909;border-color:#fff}
-    .custom{margin-top:16px;background:#101010;border:1px solid var(--line);padding:22px;display:flex;justify-content:space-between;gap:20px;align-items:center}
-    .custom h3{margin:0 0 5px;font-size:19px}.custom p{margin:0;color:#aaa;font-size:12px}
-    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:1px solid #eee;font-size:10px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;transition:.2s}
-    .button:hover{background:#fff;color:#090909}
-    .story-note{margin-top:16px;color:#92928d;font-size:11px}
-    .how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .step{border-top:1px solid var(--line);padding-top:16px}
-    .step b{font-size:10px;color:#858580;letter-spacing:.16em}
-    .step h3{font-size:18px;margin:13px 0 7px}.step p{font-size:12px;color:var(--muted);margin:0}
-    .contact{padding:76px 0 84px;background:#f1f1ee;color:#090909}
+    .details-body{padding:0 0 16px;color:#b8b8b3;font-size:12px}
+    .details-body ul{padding-left:18px;margin:0}
+    .details-body li{margin:7px 0}
+    .contact{padding:62px 0 70px;background:#f1f1ee;color:#090909}
     .contact .eyebrow{color:#666}
-    .contact h2{font-size:clamp(30px,4.6vw,48px);line-height:1.08;letter-spacing:-.055em;max-width:700px;margin:14px 0 18px;font-weight:700}
-    .contact p{max-width:560px;color:#555;font-size:14px;line-height:1.7;margin:0 0 24px}
-    .contact .button{border-color:#090909}
-    .contact .button:hover{background:#090909;color:#fff}
-    footer{padding:24px 0;color:#888;font-size:10px}
-    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    @media(max-width:700px){
+    .contact h2{font-size:clamp(30px,4.5vw,46px);line-height:1.06;letter-spacing:-.055em;max-width:700px;margin:12px 0}
+    .contact p{max-width:560px;color:#555;font-size:13px;line-height:1.7;margin:0 0 22px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:1px solid #090909;font-size:10px;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
+    .button:hover{background:#090909;color:#fff}
+    footer{padding:22px 0;color:#888;font-size:10px}
+    .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:720px){
       .wrap{width:calc(100% - 28px)}
-      .nav{min-height:62px;gap:8px}
-      .brand img{width:142px;max-height:54px}
-      .links{gap:10px;font-size:8px;letter-spacing:-.02em}
+      .nav{min-height:60px}
+      .brand img{width:140px;max-height:50px}
+      .links{gap:10px;font-size:8px;letter-spacing:0}
       .links a:nth-child(3){display:none}
-      .hero{padding:60px 0 48px}
-      .hero-meta{gap:9px;font-size:9px}
-      section{padding:52px 0}
-      .section-head{display:block;margin-bottom:24px}
-      .section-head p{margin-top:12px}
-      .grid{grid-template-columns:1fr;gap:10px}
-      .service-card{padding:21px}
-      .service-card h3{font-size:23px}
-      .custom{display:block}
-      .custom .button{margin-top:16px;width:100%}
-      .how{grid-template-columns:1fr;gap:24px}
-      .contact{padding:54px 0}
+      .hero{padding:54px 0 44px}
+      .hero-meta{gap:10px;font-size:9px}
+      section{padding:44px 0}
+      .section-head{display:block;margin-bottom:20px}
+      .section-head p{margin-top:10px}
+      .grid{grid-template-columns:1fr}
+      .two,.extras{grid-template-columns:1fr}
+      .card{padding:20px}
+      .price{font-size:27px}
+      .contact{padding:48px 0}
       .contact .button{width:100%}
     }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
@@ -97,151 +92,144 @@
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="DG Videomaker, página inicial"><img src="MOBILE.png" alt="DG Videomaker Mobile"></a>
     <nav class="links" aria-label="Navegação">
-      <a href="#producao">Produção</a><a href="#storymaker">Storymaker</a><a href="#gestao">Gestão</a><a href="#contato">Contato</a>
+      <a href="#pacotes">Pacotes</a><a href="#avulsos">Avulsos</a><a href="#storymaker">Storymaker</a><a href="#contato">Contato</a>
     </nav>
   </div>
 </header>
 <main>
-  <section class="hero">
+  <div class="hero">
     <div class="wrap">
-      <div class="eyebrow">DG Videomaker · Catálogo de serviços</div>
+      <div class="eyebrow">DG Videomaker · Foto, vídeo e conteúdo</div>
       <h1>SEU NEGÓCIO.<br><span>EM MOVIMENTO.</span></h1>
-      <p class="hero-copy">Conteúdo pensado para apresentar sua marca, valorizar o que você faz e aproximar seu negócio das pessoas.</p>
-      <div class="hero-meta"><span>Foto</span><span>Vídeo</span><span>Conteúdo digital</span></div>
+      <p class="hero-copy">Vídeos e fotografias para apresentar sua marca, valorizar seus produtos e aproximar seu negócio das pessoas.</p>
+      <div class="hero-meta"><span>Produção mobile</span><span>São José dos Campos + região</span></div>
+    </div>
+  </div>
+
+  <section id="pacotes">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">01 / Conteúdo mensal</div><h2>Pacotes de produção.</h2></div><p>Conteúdo planejado e produzido em uma diária de captação presencial.</p></div>
+      <div class="grid">
+        <article class="card">
+          <div class="tag">Para começar</div><h3>Inicial</h3>
+          <p>Presença constante com vídeos e fotos para sua marca.</p>
+          <div class="price">R$ 890</div><div class="period">por mês</div>
+          <ul><li>4 vídeos Reels</li><li>4 fotografias comerciais</li><li>Captação presencial de até 5 horas</li><li>Edição e tratamento inclusos</li></ul>
+        </article>
+        <article class="card featured">
+          <div class="tag">Mais conteúdo</div><h3>Intermediário</h3>
+          <p>Mais variedade para divulgar produtos e serviços.</p>
+          <div class="price">R$ 1.290</div><div class="period">por mês</div>
+          <ul><li>6 vídeos Reels</li><li>6 fotografias comerciais</li><li>Captação presencial de até 5 horas</li><li>Edição e tratamento inclusos</li></ul>
+        </article>
+        <article class="card">
+          <div class="tag">Maior volume</div><h3>Premium</h3>
+          <p>Uma produção mais completa para sua comunicação.</p>
+          <div class="price">R$ 1.690</div><div class="period">por mês</div>
+          <ul><li>8 vídeos Reels</li><li>8 fotografias comerciais</li><li>Captação presencial de até 5 horas</li><li>Edição e tratamento inclusos</li></ul>
+        </article>
+      </div>
+      <p class="note">Os Reels têm até 60 segundos. Cada pacote inclui uma única diária de captação presencial.</p>
     </div>
   </section>
 
-  <section id="producao">
+  <section id="avulsos">
     <div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">01 / Produção</div><h2>Foto e vídeo.</h2></div><p>Captação mobile e edição para apresentar produtos, serviços, espaços e experiências.</p></div>
-      <p class="intro-note">Escolha o formato que combina com o conteúdo que sua empresa precisa.</p>
-      <div class="grid">
-        <article class="service-card">
-          <div class="service-top"><span>01.01</span><span>Vídeo vertical</span></div>
-          <h3>Reel individual</h3>
-          <p>Um vídeo pensado para chamar atenção, apresentar sua marca e comunicar uma ideia com clareza.</p>
-          <details><summary>O que está incluído</summary><div class="detail-body"><ul><li>Alinhamento da ideia e objetivo do vídeo.</li><li>Gravação com smartphone.</li><li>Edição, montagem e tratamento de imagem.</li><li>Correção de cor e trilha sonora adequada.</li><li>Entrega em formato vertical 9:16, com até 60 segundos.</li></ul></div></details>
-          <div class="price-area"><span class="price-label">Investimento</span><div class="price-value is-hidden" aria-hidden="true">Valor a definir</div><p class="price-help">O valor aparece quando você tocar no botão.</p><button class="price-toggle" type="button" aria-expanded="false">Ver investimento</button></div>
+      <div class="section-head"><div><div class="eyebrow">02 / Produção avulsa</div><h2>Escolha o formato.</h2></div><p>Para quem precisa de um conteúdo específico ou quer complementar a produção.</p></div>
+      <div class="two">
+        <article class="small-card">
+          <div class="tag">Vídeo vertical</div><h3>Reel individual</h3>
+          <p>Gravação presencial, roteiro simples e edição de um vídeo de até 60 segundos.</p>
+          <div class="price">R$ 300</div>
         </article>
-        <article class="service-card">
-          <div class="service-top"><span>01.02</span><span>Captação presencial</span></div>
-          <h3>Captação por diária</h3>
-          <p>Uma sessão para gravar diferentes conteúdos em uma mesma visita, aproveitando melhor o tempo de produção.</p>
-          <details><summary>Como funciona</summary><div class="detail-body"><ul><li>Período de captação de 4 a 5 horas.</li><li>Organização das ideias e cenas durante a gravação.</li><li>A diária corresponde ao trabalho de captação.</li><li>Cada Reel editado é cobrado individualmente, conforme a quantidade solicitada.</li><li>Entrega dos vídeos em formato vertical 9:16, com até 60 segundos cada.</li></ul></div></details>
-          <div class="price-area"><span class="price-label">Investimento</span><div class="price-value is-hidden" aria-hidden="true">Valor a definir</div><p class="price-help">A captação e a edição são consideradas separadamente.</p><button class="price-toggle" type="button" aria-expanded="false">Ver investimento</button></div>
+        <article class="small-card">
+          <div class="tag">Captação presencial</div><h3>Diária avulsa</h3>
+          <p>Até 6 horas de captação. A edição dos vídeos é contratada separadamente.</p>
+          <div class="price">R$ 550</div>
         </article>
-        <article class="service-card">
-          <div class="service-top"><span>01.03</span><span>Fotografia</span></div>
-          <h3>Fotografia comercial</h3>
-          <p>Imagens para valorizar produtos, ambientes, equipes e a identidade visual da sua empresa.</p>
-          <details><summary>Conheça os formatos</summary><div class="detail-body"><ul><li>Pacote com 5 fotos.</li><li>Pacote com 10 fotos.</li><li>Pacote com 15 fotos.</li><li>Seleção, tratamento e edição das imagens.</li><li>Pacotes personalizados conforme a necessidade.</li></ul></div></details>
-          <div class="price-area"><span class="price-label">Investimento</span><div class="price-value is-hidden" aria-hidden="true">Valor a definir</div><p class="price-help">Escolha o pacote ideal para sua necessidade.</p><button class="price-toggle" type="button" aria-expanded="false">Ver investimento</button></div>
-        </article>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="tag">Fotografia comercial</div><h3>Fotos para sua marca</h3>
+        <p>Imagens tratadas e editadas, prontas para publicação.</p>
+        <table class="price-table" aria-label="Preços de fotografia comercial">
+          <tr><td>5 fotos</td><td>R$ 200</td></tr>
+          <tr><td>10 fotos</td><td>R$ 350</td></tr>
+          <tr><td>15 fotos</td><td>R$ 480</td></tr>
+          <tr><td>20 fotos</td><td>R$ 600</td></tr>
+        </table>
       </div>
     </div>
   </section>
 
   <section id="storymaker">
     <div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">02 / Cobertura</div><h2>Storymaker.</h2></div><p>Seu evento registrado em conteúdo vertical, pronto para compartilhar nas redes sociais.</p></div>
-      <div class="grid">
-        <article class="service-card">
-          <div class="service-top"><span>02.01</span><span>Até 2 horas</span></div>
-          <h3>Cobertura compacta</h3>
-          <p>Para registrar os principais momentos de eventos menores, lançamentos e comemorações.</p>
-          <details><summary>O que está incluído</summary><div class="detail-body"><ul><li>Captação presencial de até 2 horas.</li><li>Fotos e vídeos gravados na vertical, proporção 9:16.</li><li>Edição de conteúdos para Stories.</li><li>Textos, cortes e músicas quando fizer sentido.</li><li>Entrega pronta para publicação ou opção de publicação ao vivo, combinada na contratação.</li></ul></div></details>
-          <div class="price-area"><span class="price-label">Investimento</span><div class="price-value is-hidden" aria-hidden="true">Valor a definir</div><p class="price-help">O formato de entrega é escolhido na contratação.</p><button class="price-toggle" type="button" aria-expanded="false">Ver investimento</button></div>
-        </article>
-        <article class="service-card">
-          <div class="service-top"><span>02.02</span><span>Até 4 horas</span></div>
-          <h3>Cobertura completa</h3>
-          <p>Para acompanhar mais etapas do evento e construir uma sequência maior de conteúdos.</p>
-          <details><summary>O que está incluído</summary><div class="detail-body"><ul><li>Captação presencial de até 4 horas.</li><li>Fotos e vídeos gravados na vertical, proporção 9:16.</li><li>Edição de conteúdos para Stories.</li><li>Textos, cortes e músicas quando fizer sentido.</li><li>Entrega pronta para publicação ou opção de publicação ao vivo, combinada na contratação.</li></ul></div></details>
-          <div class="price-area"><span class="price-label">Investimento</span><div class="price-value is-hidden" aria-hidden="true">Valor a definir</div><p class="price-help">O formato de entrega é escolhido na contratação.</p><button class="price-toggle" type="button" aria-expanded="false">Ver investimento</button></div>
-        </article>
+      <div class="section-head"><div><div class="eyebrow">03 / Eventos</div><h2>Storymaker.</h2></div><p>Registros em foto e vídeo vertical para contar a história do seu evento em tempo real ou na entrega final.</p></div>
+      <div class="two">
+        <article class="small-card"><div class="tag">Cobertura compacta</div><h3>Até 2 horas</h3><p>Captação e edição de conteúdos verticais para Stories.</p><div class="price">R$ 350</div></article>
+        <article class="small-card"><div class="tag">Cobertura completa</div><h3>Até 4 horas</h3><p>Mais tempo para registrar diferentes momentos do evento.</p><div class="price">R$ 600</div></article>
       </div>
-      <div class="custom"><div><h3>Seu evento precisa de outro formato?</h3><p>Coberturas com duração diferente podem ser avaliadas sob consulta.</p></div><a class="button" href="https://wa.me/5512981438885?text=Olá!%20Quero%20um%20orçamento%20de%20Storymaker." target="_blank" rel="noopener">Consultar cobertura</a></div>
-      <p class="story-note">Formato padrão de gravação: vertical 9:16, pensado para Instagram Stories, Reels, TikTok e outras plataformas.</p>
+      <p class="note">Publicação ao vivo no Instagram pode ser combinada previamente.</p>
     </div>
   </section>
 
-  <section id="gestao">
+  <section id="complementos">
     <div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">03 / Presença digital</div><h2>Gestão de redes sociais.</h2></div><p>Organização, planejamento e publicação de conteúdo para manter a comunicação da sua marca alinhada.</p></div>
-      <div class="grid">
-        <article class="service-card">
-          <div class="service-top"><span>03.01</span><span>Gestão personalizada</span></div>
-          <h3>Organização e gestão do perfil</h3>
-          <p>Uma gestão montada conforme a necessidade, o momento e os objetivos de cada negócio.</p>
-          <details><summary>O que pode fazer parte</summary><div class="detail-body"><ul><li>Organização da foto de perfil, biografia e destaques.</li><li>Capas dos destaques e identidade visual do perfil.</li><li>Ajustes de informações, localização e configurações da conta.</li><li>Planejamento e calendário de publicações.</li><li>Publicação de Reels, fotos e artes.</li><li>Criação de legendas, chamadas para ação e hashtags.</li><li>Criação de artes complementares conforme o combinado.</li><li>Conteúdos produzidos pela DG ou enviados pelo cliente.</li></ul></div></details>
-          <div class="price-area"><span class="price-label">Investimento mensal</span><div class="price-value is-hidden" aria-hidden="true">Valor a definir</div><p class="price-help">Quantidade e frequência de publicações personalizadas.</p><button class="price-toggle" type="button" aria-expanded="false">Ver investimento</button></div>
-        </article>
-        <article class="service-card">
-          <div class="service-top"><span>03.02</span><span>Escopo do serviço</span></div>
-          <h3>O que não está incluído</h3>
-          <p>O foco da gestão é preparar e publicar os conteúdos. O atendimento ao público permanece com a empresa.</p>
-          <details open><summary>Limites da gestão</summary><div class="detail-body"><ul><li>Não inclui respostas a Direct ou comentários.</li><li>Não inclui respostas ou atendimento por Stories.</li><li>Não inclui atendimento ao cliente pelo WhatsApp.</li><li>Não inclui SAC ou relacionamento diário com seguidores.</li><li>Quantidade de publicações, artes e entregas definida em cada proposta.</li></ul></div></details>
-          <div class="price-area"><span class="price-label">Formato</span><div class="price-value">Sob medida</div><p class="price-help">A proposta é definida depois de entender a rotina do perfil.</p></div>
-        </article>
+      <div class="section-head"><div><div class="eyebrow">04 / Complementos</div><h2>Mais possibilidades.</h2></div><p>Serviços que podem complementar sua produção de conteúdo.</p></div>
+      <div class="card">
+        <div class="extras">
+          <div class="extra"><span>Arte estática para Instagram</span><strong>R$ 80</strong></div>
+          <div class="extra"><span>Carrossel de até 5 páginas</span><strong>R$ 180</strong></div>
+          <div class="extra"><span>Reel adicional na diária</span><strong>R$ 200</strong></div>
+          <div class="extra"><span>Fotografia adicional na diária</span><strong>R$ 30</strong></div>
+          <div class="extra"><span>Hora adicional de captação</span><strong>R$ 100</strong></div>
+        </div>
+        <p class="note">Artes incluem uma rodada de ajustes simples. Reels adicionais incluem edição e até 2 rodadas de ajustes simples. Serviços extras dependem do escopo e da disponibilidade da captação.</p>
       </div>
     </div>
   </section>
 
   <section id="anuncios">
     <div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">04 / Anúncios</div><h2>Gestão de tráfego pago.</h2></div><p>Campanhas no Instagram e Facebook com planejamento, criação e acompanhamento.</p></div>
-      <div class="grid">
-        <article class="service-card">
-          <div class="service-top"><span>04.01</span><span>Meta Ads</span></div>
-          <h3>Criação e gerenciamento de campanhas</h3>
-          <p>Planejamento e acompanhamento de anúncios para divulgar produtos, serviços, ofertas e fortalecer a presença da marca.</p>
-          <details><summary>O que está incluído</summary><div class="detail-body"><ul><li>Alinhamento do objetivo da campanha.</li><li>Planejamento e configuração dos anúncios.</li><li>Definição de público e localização.</li><li>Criação das artes publicitárias.</li><li>Edição de vídeos para anúncios, quando necessário e previsto na proposta.</li><li>Acompanhamento e otimização das campanhas.</li><li>Análise dos resultados.</li></ul></div></details>
-          <div class="price-area"><span class="price-label">Investimento</span><div class="price-value is-hidden" aria-hidden="true">Valor a definir</div><p class="price-help">Configuração e gerenciamento serão precificados na proposta.</p><button class="price-toggle" type="button" aria-expanded="false">Ver investimento</button></div>
-        </article>
-        <article class="service-card">
-          <div class="service-top"><span>04.02</span><span>Importante</span></div>
-          <h3>Verba de anúncios</h3>
-          <p>O valor destinado à veiculação dos anúncios não faz parte do serviço da DG.</p>
-          <details open><summary>Como funciona o pagamento</summary><div class="detail-body"><ul><li>O cliente define o orçamento de mídia junto com a DG.</li><li>O investimento em anúncios é pago diretamente à Meta pelo cliente.</li><li>A remuneração da DG pela criação e gerenciamento é cobrada separadamente.</li></ul></div></details>
-          <div class="price-area"><span class="price-label">Cobrança</span><div class="price-value">Separada da verba</div><p class="price-help">Mais clareza sobre o que é serviço e o que é investimento em mídia.</p></div>
-        </article>
+      <div class="section-head"><div><div class="eyebrow">05 / Anúncios</div><h2>Gestão de tráfego pago.</h2></div><p>Campanhas no Instagram e Facebook para divulgar produtos, serviços e ofertas.</p></div>
+      <div class="two">
+        <article class="small-card"><div class="tag">Meta Ads</div><h3>Planejamento e gerenciamento</h3><p>Até 2 campanhas ativas e 4 anúncios no total por mês, com configuração de público, acompanhamento, otimização e relatório.</p><div class="price">R$ 300</div><div class="period">por mês</div></article>
+        <article class="small-card"><div class="tag">Investimento em anúncios</div><h3>Verba paga separadamente</h3><p>O orçamento de mídia é definido com o cliente e pago diretamente à Meta. A criação de materiais para anúncios é combinada à parte.</p></article>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="condicoes">
     <div class="wrap">
-      <div class="section-head"><div><div class="eyebrow">05 / Atendimento</div><h2>Do primeiro contato à entrega.</h2></div><p>Cada projeto começa com uma conversa para entender o que sua marca precisa.</p></div>
-      <div class="how">
-        <article class="step"><b>01 / CONVERSA</b><h3>Entendemos sua ideia.</h3><p>Você conta o que precisa e alinhamos objetivo, formato e prazo.</p></article>
-        <article class="step"><b>02 / PLANEJAMENTO</b><h3>Organizamos o trabalho.</h3><p>Definimos o escopo e apresentamos uma proposta adequada ao projeto.</p></article>
-        <article class="step"><b>03 / PRODUÇÃO</b><h3>Hora de colocar em movimento.</h3><p>Produzimos, editamos e entregamos os materiais conforme o combinado.</p></article>
-      </div>
+      <div class="section-head"><div><div class="eyebrow">06 / Informações</div><h2>Como funciona.</h2></div><p>O essencial para contratar com tranquilidade.</p></div>
+      <details>
+        <summary>Condições de contratação e entrega</summary>
+        <div class="details-body">
+          <ul>
+            <li>Pagamento: 50% na contratação para reservar a data e 50% na entrega.</li>
+            <li>Prazo de entrega: até 10 dias úteis após a captação presencial.</li>
+            <li>Entrega por link do Google Drive ou por WhatsApp, em alta resolução. O link do Drive fica disponível por 30 dias.</li>
+            <li>Os pacotes mensais têm validade de 30 dias a partir da captação.</li>
+            <li>Até 2 rodadas de ajustes simples por Reel. Mudanças completas de ideia, novas gravações ou refações são orçadas à parte.</li>
+            <li>O cliente tem até 5 dias úteis após o envio para avaliar os materiais e solicitar ajustes.</li>
+            <li>Deslocamento incluso em São José dos Campos, Jacareí e Santa Isabel. Outras localidades são avaliadas previamente.</li>
+            <li>Remarcações devem ser solicitadas com pelo menos 48 horas de antecedência e dependem da disponibilidade. Cancelamentos e despesas já realizadas seguem o contrato.</li>
+            <li>Orçamentos válidos por 7 dias corridos.</li>
+            <li>Hora adicional: R$ 100, quando aplicável e previamente combinada.</li>
+          </ul>
+        </div>
+      </details>
     </div>
   </section>
 
   <section class="contact" id="contato">
     <div class="wrap">
-      <div class="eyebrow">06 / Próximo passo</div>
+      <div class="eyebrow">Vamos conversar?</div>
       <h2>Como podemos colocar sua marca em movimento?</h2>
-      <p>Conte o que sua empresa precisa neste momento. Vamos conversar, entender seu objetivo e encontrar o formato de conteúdo que faz sentido para sua marca, com uma proposta pensada para o seu negócio.</p>
-      <a class="button" href="#producao">CONHECER OS SERVIÇOS</a>
+      <p>Conte o que sua empresa precisa. Vamos entender seu objetivo e encontrar o formato de conteúdo ideal para sua marca.</p>
+      <a class="button" href="https://wa.me/5512981438885?text=Olá!%20Quero%20conhecer%20os%20serviços%20da%20DG%20Videomaker." target="_blank" rel="noopener">SOLICITAR ORÇAMENTO</a>
     </div>
   </section>
 </main>
 <footer><div class="wrap foot"><strong>DG VIDEOMAKER · MOBILE</strong><span>São José dos Campos, Santa Isabel e região</span><span>Instagram: @dg.vmaker</span><span>© 2026 DG Videomaker</span></div></footer>
-<script>
-  document.querySelectorAll('.price-toggle').forEach(button=>{
-    button.addEventListener('click',()=>{
-      const area=button.closest('.price-area');
-      const value=area.querySelector('.price-value');
-      const hidden=value.classList.toggle('is-hidden');
-      value.setAttribute('aria-hidden',String(hidden));
-      button.setAttribute('aria-expanded',String(!hidden));
-      button.textContent=hidden?'Ver investimento':'Ocultar valor';
-      area.querySelector('.price-help').textContent=hidden?'O valor aparece quando você tocar no botão.':'Valor em definição. A precificação será adicionada antes da divulgação.';
-    });
-  });
-</script>
 </body>
 </html>
