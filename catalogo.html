@@ -36,6 +36,10 @@
     .card h3{font-size:21px;letter-spacing:-.04em;line-height:1.1;margin:14px 0 8px}
     .card p{font-size:12px;color:#b8b8b3;margin:0}
     .price{font-size:16px;font-weight:600;letter-spacing:0;color:#aaa;margin:14px 0 0}
+    .reveal-price{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 12px;border:1px solid #777;background:transparent;color:#f5f5f3;font:600 11px Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:.2s}
+    .reveal-price:hover{background:#f1f1ee;color:#090909;border-color:#f1f1ee}
+    .price .reveal-price{margin-top:0}
+    .price-table td:last-child .reveal-price{min-height:30px}
     .period{font-size:10px;color:#777;margin-top:1px}
     .card ul{padding-left:17px;margin:15px 0 0;color:#c6c6c1;font-size:12px}
     .card li{margin:5px 0}
@@ -230,5 +234,24 @@
   </section>
 </main>
 <footer><div class="wrap foot"><strong>DG VIDEOMAKER · MOBILE</strong><span>São José dos Campos, Santa Isabel e região</span><span>Instagram: @dg.vmaker</span><span>© 2026 DG Videomaker</span></div></footer>
+  <script>
+    // Os preços só aparecem quando a pessoa toca em "Ver valor".
+    document.querySelectorAll('.price, .price-table td:last-child').forEach(element => {
+      const value = element.textContent.trim();
+      if (!value) return;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'reveal-price';
+      button.textContent = 'Ver valor';
+      button.setAttribute('aria-expanded', 'false');
+      button.addEventListener('click', () => {
+        const isRevealed = button.getAttribute('aria-expanded') === 'true';
+        button.textContent = isRevealed ? 'Ver valor' : value;
+        button.setAttribute('aria-expanded', String(!isRevealed));
+      });
+      element.textContent = '';
+      element.appendChild(button);
+    });
+  </script>
 </body>
 </html>
